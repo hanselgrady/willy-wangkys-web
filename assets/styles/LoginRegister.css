@@ -40,7 +40,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url("/assets/images/loginwallpaper.jpg");
+    background-image: url("../images/loginwallpaper.jpg");
     background-size: cover;
 }
 
