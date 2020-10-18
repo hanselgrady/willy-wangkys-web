@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+h1 {
+    color:brown;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 10px solid black;
+    position: relative;
+    width: 470px;
+    top: 50px;
+    left: 60px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Pacifico', sans-serif;
+}
+
+.outer-box {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    position: fixed;
+    min-width: 600px;
+    min-height: 650px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("loginwallpaper.jpg");
+    background-size: cover;
+}
+
+.input-area-login {
+    position: absolute;
+    width: 470px;
+    margin-bottom: 30px;
+    height: fit-content;
+    border: 10px solid black;
+    left: 60px;
+    bottom: 70px;
+}
+
+.input-area-register {
+    position: absolute;
+    width: 470px;
+    margin-bottom: 30px;
+    height: fit-content;
+    border: 10px solid black;
+    left: 60px;
+    bottom: 10px;
+}
+
+.component-wrapper {
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 30px;
+}
+
+.component-wrapper .input-wrapper {
+    height: 30px;
+    width: 100%;
+    position: relative;
+}
+
+.component-wrapper .input-wrapper input {
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    border: 2px solid grey;
+    background-color: transparent;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.component-wrapper .input-wrapper input:invalid {
+    box-shadow: 0 0 0px red;
+}
+
+.component-wrapper .input-wrapper label {
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    bottom: 35px;
+    color:brown;
+    left: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.component-wrapper .input-wrapper button {
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    background-color: brown;
+    align-self: center;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+    border: none;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.component-wrapper .input-wrapper button:hover,
+.component-wrapper .input-wrapper button:visited:hover,
+.component-wrapper .input-wrapper button:active {
+    width: 100%;
+    font-weight: bold;
+    color: brown;
+    background-color: white;
+    align-self: center;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+    border: none;
+}
