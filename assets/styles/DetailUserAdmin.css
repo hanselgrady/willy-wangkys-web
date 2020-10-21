@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/loginwallpaper.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.navigator {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: brown;
+    height: 60px;
+    width: 100%;
+    min-width: 1000px;
+}
+
+.navigator ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigator li {
+    float: left;
+    padding-left: 20px;
+}
+
+.navigator li a:link,
+.navigator li a:visited,
+.navigator li a:hover,
+.navigator li a:visited:hover,
+.navigator li a:active {
+    font-size: 34px;
+    text-decoration: none;
+    font-family: 'Pacifico', sans-serif;
+    background-color: brown;
+    color: white;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navigator li a:hover,
+.navigator li a:visited:hover,
+.navigator li a:active {
+    font-size: 34px;
+    text-decoration: none;
+    font-family: 'Pacifico', sans-serif;
+    background-color: white;
+    color: brown;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 1px;
+}
+
+.navigator .label-navigator {
+    min-width: 365px;
+}
+
+.navigator .label-navigator label {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: xx-large;
+    font-family: 'Pacifico', sans-serif;
+    background-color: brown;
+    color: white;
+    padding-top: 2px;
+}
+
+.navigator input {
+    position: relative;
+    top: 10px;
+    min-width: 500px;
+    font-size: 20px;
+    padding: 5px;
+    color: grey;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.logout {
+    position: absolute;
+    background-color: brown;
+    right: 20px;
+}
+
+.opacity-layer {
+    position: absolute;
+    top: 60px;
+    background-color: rgba(255, 255, 255, 0.6);
+    min-width: 100%;
+    min-height: 90%;
+}
+
+.opacity-layer .main-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    min-width: 90%;
+    min-height: 80%;
+}
+
+.main-container .label-title label {
+    font-size: 50px;
+    font-family: 'Pacifico', sans-serif;
+    padding-left: 20px;
+}
+
+.main-container .secondary-container {
+    position: relative;
+    font-family: 'Playfair Display', sans-serif;
+    padding-left: 20px;
+}
+
+.secondary-container .image-container img{
+    border: 1px solid white;
+    padding: 5px;
+    width: 250px;
+    float: left;
+}
+
+.secondary-container .text-container {
+    font-size: 16px;
+    position: relative;
+    left: 20px;
+    max-width: 1180px;
+}
+
+.text-container .content-label {
+    padding-bottom: 20px;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    float: right;
+}
+
+.button-container button {
+    left: 20px;
+    min-width: 300px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    background-color: brown;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 5px;
+    align-self: center;
+}
+
+.button-container button:hover,
+.button-container button:visited:hover,
+.button-container button:active {
+    left: 20px;
+    min-width: 300px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    background-color: white;
+    color: brown;
+    text-decoration: none;
+    border: none;
+    padding: 5px;
+    align-self: center;
+}
