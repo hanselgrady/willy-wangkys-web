@@ -19,6 +19,6 @@
         $query = "INSERT INTO chocolate (name, price, description, image, amount) 
         VALUES ('{$chocolate_name}', {$chocolate_price}, '{$chocolate_description}', '{$chocolate_image}, {$chocolate_amount})";
         $connector->run($query);
-        
+        $connector->close();
     }
 ?>

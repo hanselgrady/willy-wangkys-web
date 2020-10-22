@@ -22,6 +22,10 @@
                 echo "Error: " . $query . "<br>" . $this->connection->error;
             }
         }
+
+        function close() {
+            $this->connection->close();
+        }
         
     }
     
