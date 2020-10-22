@@ -6,20 +6,25 @@
         private $password;
         public $connection;
         function __construct() {
-            $this->server = "willywangky";
-            $this->username = "willywangky";
-            $this->passoword = "willywangky";
-            $this->connection = new mysqli($this->server, $this->username, $this->password);
-            if ($this->connection->connect_error) {
-                die("Connection failed: " . $this->connection->connect_error);
+            $this->server = 'localhost';
+            $this->username = 'willywangky';
+            $this->password = 'willywangky';
+            $this->database = 'willywangky';
+            if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
+                echo "Mysqli doesnt loaded";
+            } else {
+                echo "Mysqli loaded";
             }
-            echo "Connected successfully";
+            $this->connection = new mysqli($this->server, $this->username, $this->password, $this->database);
+            if ($this->connection->connect_error) {
+                die("<script> alert('Connection failed: {$this->connection->connect_error}') </script>");
+            }
         }
         function run($query) {
             if ($this->connection->query($query) === TRUE) {
-                echo "Query success";
+                echo "<script> alert('Query success') </script>";
             } else {
-                echo "Error: " . $query . "<br>" . $this->connection->error;
+                echo "<script> alert('Error: {$this->connection->error}') </script>";
             }
         }
 
