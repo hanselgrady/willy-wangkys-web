@@ -1,3 +1,25 @@
+<?php include 'connector.php';    
+
+    $query = "SELECT * FROM chocolate limit 10";
+    $connector = new Connector();
+    $data = $connector->getAllData($query);
+
+    $dashboardItemHTML = '';
+    foreach ($data as $row) {
+        $dashboardItemHTML .= '
+                 <a href="#c" class="dashboard-card-container">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-image"></div>
+                        <div class="dashboard-card-text">
+                            <h2>' . $row['name'] . '</h2>
+                            <p>Rp' . $row['price'] . '</p>
+                        </div>
+                    </div>
+                </a>';
+    }
+
+?>
+
 <!doctype html>
 <html>
     <head>
@@ -11,96 +33,7 @@
             <h1>Produk Terlaris</h1>
             <p>Content</p>
             <div class="dashboard-listing-container">
-                <a href="#c" class="dashboard-card-container">
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-image"></div>
-                        <div class="dashboard-card-text">
-                            <h2>Product Card</h2>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#c" class="dashboard-card-container">
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-image"></div>
-                        <div class="dashboard-card-text">
-                            <h2>Product Card</h2>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#c" class="dashboard-card-container">
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-image"></div>
-                        <div class="dashboard-card-text">
-                            <h2>Product Card</h2>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#c" class="dashboard-card-container">
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-image"></div>
-                        <div class="dashboard-card-text">
-                            <h2>Product Card</h2>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#c" class="dashboard-card-container">
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-image"></div>
-                        <div class="dashboard-card-text">
-                            <h2>Product Card</h2>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#c" class="dashboard-card-container">
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-image"></div>
-                        <div class="dashboard-card-text">
-                            <h2>Product Card</h2>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#c" class="dashboard-card-container">
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-image"></div>
-                        <div class="dashboard-card-text">
-                            <h2>Product Card</h2>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#c" class="dashboard-card-container">
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-image"></div>
-                        <div class="dashboard-card-text">
-                            <h2>Product Card</h2>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#c" class="dashboard-card-container">
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-image"></div>
-                        <div class="dashboard-card-text">
-                            <h2>Product Card</h2>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#c" class="dashboard-card-container">
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-image"></div>
-                        <div class="dashboard-card-text">
-                            <h2>Product Card</h2>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </a>
+                <?php echo $dashboardItemHTML; ?>
             </div>
         </div>
         <?php include 'get-footer.php';?>

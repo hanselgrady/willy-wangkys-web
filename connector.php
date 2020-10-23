@@ -13,7 +13,7 @@
             if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
                 echo "Mysqli doesnt loaded";
             } else {
-                echo "Mysqli loaded";
+                /* echo "Mysqli loaded"; */
             }
             $this->connection = new mysqli($this->server, $this->username, $this->password, $this->database);
             if ($this->connection->connect_error) {
@@ -22,7 +22,7 @@
         }
         function run($query) {
             if ($this->connection->query($query) === TRUE) {
-                echo "<script> alert('Query success') </script>";
+                /* echo "<script> alert('Query success') </script>"; */
             } else {
                 echo "<script> alert('Error: {$this->connection->error}') </script>";
             }
