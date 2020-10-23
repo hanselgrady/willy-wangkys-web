@@ -7,17 +7,17 @@
     <body>
         <div class="outer-box">
             <h1>Willy Wangky Choco Factory</h1>
-            <form>
+            <form method="POST" action="login.php">
                 <div class="input-area-login">
                     <div class="component-wrapper">
                         <div class="input-wrapper">
-                            <input text="text" id="email" placeholder="Email">
+                            <input text="text" id="email" name="email" placeholder="Email" required>
                             <label>Email</label>
                         </div>
                     </div>
                     <div class="component-wrapper">
                         <div class="input-wrapper">
-                            <input text="text" type="password" id="password" placeholder="Password">
+                            <input text="text" type="password" id="password" name="password" placeholder="Password" required>
                             <label>Password</label>
                         </div>
                     </div>

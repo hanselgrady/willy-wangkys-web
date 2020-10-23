@@ -7,11 +7,11 @@
     <body>
         <div class="outer-box">
             <h1>Willy Wangky Choco Factory</h1>
-            <form>
+            <form method="POST" action="register.php">
             <div class="input-area-register">
                 <div class="component-wrapper">
                     <div class="input-wrapper">
-                        <input text="text" placeholder="e.g. johndoe13" id="username">
+                        <input text="text" placeholder="e.g. johndoe13" id="username" required>
                         <label>Username</label>
                     </div>
                     <div class="invalid-register">
@@ -20,7 +20,7 @@
                 </div>
                 <div class="component-wrapper">
                     <div class="input-wrapper">
-                        <input text="text" placeholder="e.g. johndoe@gmail.com" id="email">
+                        <input text="text" placeholder="e.g. johndoe@gmail.com" id="email" required>
                         <label>Email</label>
                     </div>
                     <div class="invalid-register">
@@ -29,7 +29,7 @@
                 </div>
                 <div class="component-wrapper">
                     <div class="input-wrapper">
-                        <input text="text" type="password" placeholder="Password" id="password">
+                        <input text="text" type="password" placeholder="Password" id="password" required>
                         <label>Password</label>
                     </div>
                     <div class="invalid-register">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="component-wrapper">
                     <div class="input-wrapper">
-                        <input text="text" type="password" placeholder="Confirm Password" id="confirm">
+                        <input text="text" type="password" placeholder="Confirm Password" id="confirm" required>
                         <label>Confirm Password</label>
                     </div>
                 </div>

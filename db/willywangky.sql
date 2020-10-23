@@ -40,9 +40,9 @@ DROP TABLE IF EXISTS `willywangky`.`user` ;
 
 CREATE TABLE IF NOT EXISTS `willywangky`.`user` (
   `id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `password` VARCHAR(45) NOT NULL,
-  `description` VARCHAR(45) NOT NULL,
   `superuser` TINYINT NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -90,7 +90,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `willywangky`;
-INSERT INTO `willywangky`.`user` (`id`, `email`, `password`, `description`, `superuser`) VALUES (1, 'willywangky', 'willywangky', 'first super user', 1);
+INSERT INTO `willywangky`.`user` (`id`, `username`, `email`, `password`, `superuser`) VALUES (1, 'willywangky', 'willywangky@gmail.com', 'willywangky', 1);
 
 COMMIT;
 

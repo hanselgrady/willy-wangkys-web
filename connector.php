@@ -28,6 +28,14 @@
             }
         }
 
+        function getAllData($query) {
+            $result = $this->connection->query($query);
+            while ($row = $result->fetch_assoc()) {
+                $rows[] = $row;
+            }
+            return $rows;
+        }
+
         function close() {
             $this->connection->close();
         }
