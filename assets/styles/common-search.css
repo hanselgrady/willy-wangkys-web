@@ -21,11 +21,6 @@
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.search-card::after {
-    content: "";
-    clear: both;
-    display: table;
-}
 
 .search-card:hover {
     background-color: #ffffff;
@@ -49,4 +44,39 @@
 
 .search-card p {
     color: #161616;
+}
+
+.pagination-centering {
+    text-align: center;
+}
+
+.pagination {
+    display: inline-block;
+    padding: 5px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.pagination a {
+    float: left;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #161616;
+    border-radius: 10px;
+}
+
+.pagination a.active {
+    background-color: brown;
+    color: #f4f4f4;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ffffff; 
+}
+
+.search-card::after, .pagination::after {
+    content: "";
+    clear: both;
+    display: table;
 }

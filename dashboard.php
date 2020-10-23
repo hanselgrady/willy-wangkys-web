@@ -1,27 +1,108 @@
-<!DOCTYPE HTML>
-<html lang="en" dir="lttr">
+<!doctype html>
+<html>
     <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="assets/styles/LoginRegister.css">
+        <title>Dasboard - Willy-Wanky</title>
+        <link rel="stylesheet" type="text/css" href="/assets/styles/common.css">
+        <link rel="stylesheet" type="text/css" href="/assets/styles/common-navbar.css">
     </head>
     <body>
-        <div class="header">
-            <form>
-                <input type="text">
-            </form>
-            <?php
-                if (isset($COOKIES['username'] && isSuperuser($COOKIE))) {
-                    echo '
-                        
-                    ';
-                } else {
-                    echo '
-                    ';
-                }
-            ?>
-            <button>Logout</button>
+        <?php include 'get-header.php';?>
+        <div class="thread">
+            <h1>Produk Terlaris</h1>
+            <p>Content</p>
+            <div class="dashboard-listing-container">
+                <a href="#c" class="dashboard-card-container">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-image"></div>
+                        <div class="dashboard-card-text">
+                            <h2>Product Card</h2>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#c" class="dashboard-card-container">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-image"></div>
+                        <div class="dashboard-card-text">
+                            <h2>Product Card</h2>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#c" class="dashboard-card-container">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-image"></div>
+                        <div class="dashboard-card-text">
+                            <h2>Product Card</h2>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#c" class="dashboard-card-container">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-image"></div>
+                        <div class="dashboard-card-text">
+                            <h2>Product Card</h2>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#c" class="dashboard-card-container">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-image"></div>
+                        <div class="dashboard-card-text">
+                            <h2>Product Card</h2>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#c" class="dashboard-card-container">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-image"></div>
+                        <div class="dashboard-card-text">
+                            <h2>Product Card</h2>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#c" class="dashboard-card-container">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-image"></div>
+                        <div class="dashboard-card-text">
+                            <h2>Product Card</h2>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#c" class="dashboard-card-container">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-image"></div>
+                        <div class="dashboard-card-text">
+                            <h2>Product Card</h2>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#c" class="dashboard-card-container">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-image"></div>
+                        <div class="dashboard-card-text">
+                            <h2>Product Card</h2>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#c" class="dashboard-card-container">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-image"></div>
+                        <div class="dashboard-card-text">
+                            <h2>Product Card</h2>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="content">
-        </div>
+        <?php include 'get-footer.php';?>
     </body>
 </html>
