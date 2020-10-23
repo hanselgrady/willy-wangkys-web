@@ -7,25 +7,31 @@
     <body>
         <div class="outer-box">
             <h1>Willy Wangky Choco Factory</h1>
-            <div class="input-area-login">
-                <div class="component-wrapper">
-                    <div class="input-wrapper">
-                        <input text="text" required>
-                        <label>Username</label>
+            <form method="POST" action="login.php">
+                <div class="input-area-login">
+                    <div class="component-wrapper">
+                        <div class="input-wrapper">
+                            <input text="text" id="email" name="email" placeholder="Email" required>
+                            <label>Email</label>
+                        </div>
+                    </div>
+                    <div class="component-wrapper">
+                        <div class="input-wrapper">
+                            <input text="text" type="password" id="password" name="password" placeholder="Password" required>
+                            <label>Password</label>
+                        </div>
+                    </div>
+                    <div class="invalid-login">
+                        <p id="error-login">Invalid username or password!</p>
+                    </div>
+                    <div class="component-wrapper">
+                        <div class="button-wrapper">
+                            <input type="submit" value="Login">
+                            <input type="button" onclick="location.href = 'Register.html'" value="Register Here!">
+                        </div>
                     </div>
                 </div>
-                <div class="component-wrapper">
-                    <div class="input-wrapper">
-                        <input text="text" type="password" required>
-                        <label>Password</label>
-                    </div>
-                </div>
-                <div class="component-wrapper">
-                    <div class="input-wrapper">
-                        <button>Login</button>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
     </body>
 </html>

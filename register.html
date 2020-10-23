@@ -7,37 +7,49 @@
     <body>
         <div class="outer-box">
             <h1>Willy Wangky Choco Factory</h1>
+            <form method="POST" action="register.php">
             <div class="input-area-register">
                 <div class="component-wrapper">
                     <div class="input-wrapper">
-                        <input text="text" required>
+                        <input text="text" placeholder="e.g. johndoe13" id="username" required>
                         <label>Username</label>
                     </div>
+                    <div class="invalid-register">
+                        <p id="error-username">Username is not valid!</p>
+                    </div>
                 </div>
                 <div class="component-wrapper">
                     <div class="input-wrapper">
-                        <input text="text" required>
+                        <input text="text" placeholder="e.g. johndoe@gmail.com" id="email" required>
                         <label>Email</label>
                     </div>
-                </div>
-                <div class="component-wrapper">
-                    <div class="input-wrapper">
-                        <input text="text" type="password" required>
-                        <label>Password</label>
+                    <div class="invalid-register">
+                        <p id="error-email">Email is not valid!</p>
                     </div>
                 </div>
                 <div class="component-wrapper">
                     <div class="input-wrapper">
-                        <input text="text" type="password" required>
+                        <input text="text" type="password" placeholder="Password" id="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="invalid-register">
+                        <p id="error-password">Password is too short!</p>
+                    </div>
+                </div>
+                <div class="component-wrapper">
+                    <div class="input-wrapper">
+                        <input text="text" type="password" placeholder="Confirm Password" id="confirm" required>
                         <label>Confirm Password</label>
                     </div>
                 </div>
                 <div class="component-wrapper">
-                    <div class="input-wrapper">
-                        <button>Register</button>
+                    <div class="button-wrapper">
+                        <input type="submit" value="Register">
+                        <input type="button" onclick="location.href = 'Login.html'" value="Login Here!">
                     </div>
                 </div>
             </div>
+            </form>
         </div>
     </body>
 </html>

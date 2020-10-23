@@ -32,7 +32,7 @@ h1 {
     background-color: rgba(255, 255, 255, 0.75);
     position: fixed;
     min-width: 600px;
-    min-height: 650px;
+    min-height: 670px;
 }
 
 body {
@@ -55,29 +55,76 @@ body {
 }
 
 .input-area-register {
+    top: 150px;
     position: absolute;
     width: 470px;
     margin-bottom: 30px;
     height: fit-content;
     border: 10px solid black;
     left: 60px;
-    bottom: 10px;
+    bottom: 32px;
 }
 
 .component-wrapper {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 12px;
     width: 450px;
+    height: max-content;
     background-color: rgba(255, 255, 255, 0.75);
-    padding: 30px;
 }
 
 .component-wrapper .input-wrapper {
-    height: 30px;
+    height: 33px;
     width: 100%;
     position: relative;
 }
 
+.component-wrapper .button-wrapper {
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    height: 60px;
+    width: 450px;
+    position: relative;
+    float: left;
+    left: -20px;
+    bottom: 0px;
+    padding-left: 50px;
+}
+
+.component-wrapper .button-wrapper input,
+.component-wrapper .button-wrapper input:visited {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: white;
+    background-color: brown;
+    height: max-content;
+    align-self: center;
+    font-size: 25px;
+    border: none;
+    min-width: 40%;
+    padding: 10px 10px 10px;
+}
+
+.component-wrapper .button-wrapper input:hover,
+.component-wrapper .button-wrapper input:visited:hover,
+.component-wrapper .button-wrapper input:active {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    height: max-content;
+    color: brown;
+    background-color: white;
+    align-self: center;
+    font-size: 25px;
+    border: none;
+    min-width: 40%;
+    padding: 5px;
+}
+
 .component-wrapper .input-wrapper input {
-    height: 100%;
+    box-shadow: 0 0 0px red;
+    padding-left: 2px;
+    height: 80%;
     width: 100%;
     font-size: 15px;
     border: 2px solid grey;
@@ -85,11 +132,8 @@ body {
     font-family: 'Playfair Display', sans-serif;
 }
 
-.component-wrapper .input-wrapper input:invalid {
-    box-shadow: 0 0 0px red;
-}
-
 .component-wrapper .input-wrapper label {
+    padding-bottom: 5px;
     font-weight: bold;
     font-size: 20px;
     position: absolute;
@@ -99,29 +143,45 @@ body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.component-wrapper .input-wrapper button {
-    width: 100%;
-    font-weight: bold;
-    color: white;
-    background-color: brown;
-    align-self: center;
-    font-size: 25px;
-    text-decoration: none;
-    padding: 5px;
-    border: none;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+.input-area-register .component-wrapper .input-wrapper input:not(:placeholder-shown):invalid {
+    border: 2px solid red;
+    box-shadow: 0 0 0px red;
 }
 
-.component-wrapper .input-wrapper button:hover,
-.component-wrapper .input-wrapper button:visited:hover,
-.component-wrapper .input-wrapper button:active {
+.input-area-register .component-wrapper .input-wrapper input:not(:placeholder-shown)valid {
+    border: 2px solid green;
+}
+
+.input-area-login .component-wrapper .input-wrapper input:invalid {
+    box-shadow: 0 0 0px red;
+}
+
+.input-area-login .invalid-login {
+    position: absolute;
     width: 100%;
+    background-color: transparent;
+}
+
+.invalid-login p {
+    visibility: hidden;
+    padding-left: 30px;
     font-weight: bold;
-    color: brown;
-    background-color: white;
-    align-self: center;
-    font-size: 25px;
-    text-decoration: none;
-    padding: 5px;
-    border: none;
+    color: red;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 12px;
+}
+
+.invalid-register p {
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: bold;
+    color: red;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 12px;
+}
+
+.input-area-login p {
+    width: 100%;
+    height: 100%;
 }
