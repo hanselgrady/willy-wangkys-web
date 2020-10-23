@@ -91,7 +91,7 @@ COMMIT;
 START TRANSACTION;
 USE `willywangky`;
 INSERT INTO `willywangky`.`user` (`id`, `username`, `password`, `description`, `superuser`) VALUES (1, 'willywangky', 'willywangky', 'first super user', 1);
-
+INSERT INTO `willywangky`.`user` (`id`, `username`, `password`, `description`, `superuser`) VALUES (2, 'wangky3110', 'if3110wbd', 'first normal user', 0);
 COMMIT;
 
 
