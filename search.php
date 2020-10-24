@@ -1,5 +1,5 @@
 <?php
-
+    include 'connector.php';
     include 'validate-auth.php';
 
     $skey = "";

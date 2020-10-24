@@ -11,7 +11,7 @@ const searchQuery = (key, pageNum, maxItemPerPage) => {
                     searchResultListHTML = '';
                     for (item of response.items) {
                         searchResultListHTML +=
-                            '<a href="#c" class="search-card-container">' +
+                            '<a href="/detail.php?itemID=' + item.id + '" class="search-card-container">' +
                                 '<div class="search-card">' +
                                     '<div class="search-card-image"></div>' +
                                     '<div class="search-card-text">' +

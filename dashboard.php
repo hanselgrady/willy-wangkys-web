@@ -9,7 +9,7 @@
     $dashboardItemHTML = '';
     foreach ($data as $row) {
         $dashboardItemHTML .= '
-                 <a href="#c" class="dashboard-card-container">
+                 <a href="/detail.php?itemID=' . $row['id'] . '" class="dashboard-card-container">
                     <div class="dashboard-card">
                         <div class="dashboard-card-image"></div>
                         <div class="dashboard-card-text">
