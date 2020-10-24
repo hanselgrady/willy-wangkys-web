@@ -1,4 +1,4 @@
-<?php 
+<?php
     include_once 'validate-auth.php'; 
     include_once 'connector.php';    
 
@@ -11,7 +11,7 @@
         $dashboardItemHTML .= '
                  <a href="/detail.php?itemID=' . $row['id'] . '" class="dashboard-card-container">
                     <div class="dashboard-card">
-                        <div class="dashboard-card-image"></div>
+                        <div class="dashboard-card-image"style="background-image: url(\'/image/' . $row['image'] .'\')"></div>
                         <div class="dashboard-card-text">
                             <h2>' . $row['name'] . '</h2>
                             <p>Rp' . $row['price'] . '</p>
