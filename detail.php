@@ -6,7 +6,13 @@
     if (!isset($_GET['itemID'])) {
         header('Location: /dashboard.php');
     }
-    $query = "SELECT * FROM chocolate WHERE id = " . $_GET['itemID'];
+    /* $query = "SELECT * FROM chocolate WHERE id = " . $_GET['itemID']; */
+    $query = "
+        SELECT chocolate.id AS chocoID, name, price, image, description, chocolate.amount AS amount,
+            COALESCE(SUM(transaction.amount), 0) AS amountSold
+        FROM chocolate LEFT OUTER JOIN transaction
+        ON transaction.chocolate_id = chocolate.id
+        WHERE chocolate.id = " . $_GET['itemID']; 
     $connector = new Connector();
     $result = $connector->getAllData($query); 
     if (count($result) == 0) {
@@ -39,7 +45,7 @@
                     <div class="text-container">
                         <div class="content-label">
                             <label><b>Amount sold : </b></label>
-                            <label id="Sold">8</label>
+                            <label id="Sold"><?php echo $result[0]['amountSold'];?></label>
                         </div>
                         <div class="content-label">
                             <label><b>Price : </b></label>

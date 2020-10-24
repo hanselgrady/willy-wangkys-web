@@ -2,18 +2,27 @@
     include_once 'validate-auth.php'; 
     include_once 'connector.php';    
 
-    $query = "SELECT * FROM chocolate limit 10";
+    $query = "
+        SELECT chocolate.id AS chocoID, name, price, image,
+            COALESCE(SUM(transaction.amount), 0) AS amountSold
+        FROM chocolate LEFT OUTER JOIN transaction
+        ON transaction.chocolate_id = chocolate.id
+        GROUP BY chocoID
+        ORDER BY amountSold DESC;
+    ";
     $connector = new Connector();
     $data = $connector->getAllData($query);
 
     $dashboardItemHTML = '';
     foreach ($data as $row) {
         $dashboardItemHTML .= '
-                 <a href="/detail.php?itemID=' . $row['id'] . '" class="dashboard-card-container">
+                 <a href="/detail.php?itemID=' . $row['chocoID'] . '" class="dashboard-card-container">
                     <div class="dashboard-card">
-                        <div class="dashboard-card-image"style="background-image: url(\'/image/' . $row['image'] .'\')"></div>
+                        <div class="dashboard-card-image"style="background-image: url(\'/image/' . 
+                            $row['image'] .'\')"></div>
                         <div class="dashboard-card-text">
                             <h2>' . $row['name'] . '</h2>
+                            <p>Sold: ' . $row['amountSold'] . '</p>
                             <p>Rp' . $row['price'] . '</p>
                         </div>
                     </div>
