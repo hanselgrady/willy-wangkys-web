@@ -1,4 +1,6 @@
-<?php include 'connector.php';    
+<?php 
+    include 'validate-auth.php'; 
+    include 'connector.php';    
 
     $query = "SELECT * FROM chocolate limit 10";
     $connector = new Connector();
@@ -18,6 +20,8 @@
                 </a>';
     }
 
+    $username = $_COOKIE['username'];
+
 ?>
 
 <!doctype html>
@@ -32,7 +36,7 @@
         <div class="thread">
             <div class="clearfix">
                 <div class="dashboard-welcome">
-                    <p>Welcome, wangky</p>
+                    <p>Welcome, <?php echo $username; ?></p>
                 </div>
                 <div class="dashboard-list-all">
                     <p><a href="/search.php?key=#page=1">Lihat semua</a></p>

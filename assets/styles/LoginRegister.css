@@ -160,10 +160,10 @@ body {
     position: absolute;
     width: 100%;
     background-color: transparent;
+    visibility: hidden;
 }
 
 .invalid-login p {
-    visibility: hidden;
     padding-left: 30px;
     font-weight: bold;
     color: red;
