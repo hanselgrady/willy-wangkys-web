@@ -1,8 +1,4 @@
 <?php
-    if (isset($_COOKIE["username"])) {
-        header("Location: /dashboard.php");
-    }
-
     $invalidLoginVisibility = 'hidden';
     if (isset($_GET['auth'])) {
         if ($_GET['auth'] == 'invalid') {

@@ -1,4 +1,4 @@
-<?php
+<?php 
     include_once 'validate-auth.php'; 
     include_once 'connector.php';    
 
@@ -11,7 +11,7 @@
         $dashboardItemHTML .= '
                  <a href="/detail.php?itemID=' . $row['id'] . '" class="dashboard-card-container">
                     <div class="dashboard-card">
-                        <div class="dashboard-card-image"style="background-image: url(\'/image/' . $row['image'] .'\')"></div>
+                        <div class="dashboard-card-image"></div>
                         <div class="dashboard-card-text">
                             <h2>' . $row['name'] . '</h2>
                             <p>Rp' . $row['price'] . '</p>
@@ -36,10 +36,10 @@
         <div class="thread">
             <div class="clearfix">
                 <div class="dashboard-welcome">
-                    <span>Welcome, <?php echo $username; ?></span>
+                    <p>Welcome, <?php echo $username; ?></p>
                 </div>
                 <div class="dashboard-list-all">
-                    <span><a href="/search.php?key=#page=1">Lihat semua</a></span>
+                    <p><a href="/search.php?key=#page=1">Lihat semua</a></p>
                 </div>
             </div>
             <h1>Produk Terlaris</h1>
