@@ -1,5 +1,21 @@
 # Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web
 
+## Daftar Requirement
+* Web browser modern
+* Server PHP
+* DBMS MySQL
+
+## Instalasi
+
+## Menjalankan Server
+* Buka terminal
+* Jalankan command berikut:
+    ```
+    php -S localhost:8000
+    ```
+* Buka web browser
+* Buka alamat localhost:8000
+
 ## Tujuan Pembelajaran Tugas Besar 1
 
 * Mahasiswa mampu membuat sebuah aplikasi web dengan menggunakan HTML, CSS dan JS.
