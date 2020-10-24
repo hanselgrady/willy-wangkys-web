@@ -4,7 +4,7 @@ const searchQuery = (key, pageNum, maxItemPerPage) => {
         if (this.readyState === 4 && this.status === 200) {
             let response = JSON.parse(this.responseText);
             let searchCount = document.getElementById('search-count');
-            if (searchCount) searchCount.innerHTML = '' + response.searchCount + ' hasil pencarian.';
+            if (searchCount) searchCount.innerHTML = '' + response.searchCount + ' results.';
             if (response.searchCount > 0) {
                 let searchResultList = document.getElementById('search-results');
                 if (searchResultList) {
@@ -13,7 +13,8 @@ const searchQuery = (key, pageNum, maxItemPerPage) => {
                         searchResultListHTML +=
                             '<a href="/detail.php?itemID=' + item.chocoID + '" class="search-card-container">' +
                                 '<div class="search-card">' +
-                                    '<div class="search-card-image"></div>' +
+                                    '<div class="search-card-image" style="background-image:url(\'/image/' + 
+                            item.image + '\');"></div>' +
                                     '<div class="search-card-text">' +
                                         '<h2>' + item.name + '</h2>' +
                                         '<p>Sold: ' + item.amountSold + '</p>' +

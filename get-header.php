@@ -22,10 +22,10 @@ echo '
                 <li><a href="/dashboard.php" id="wwc-title">Willy Wanky Choco Factory</a></li>';
 if (isset($_COOKIE['username']) && isSuperuser($_COOKIE['username'])) {
     echo '
-                <li><a href="/add.php">Tambah Coklat</a></li>';
+                <li><a href="/add.php">Add New Product</a></li>';
 } else {
     echo '
-                <li><a href="#">Transaksi</a></li>';
+                <li><a href="#">History</a></li>';
 }
 echo '
             </ul>

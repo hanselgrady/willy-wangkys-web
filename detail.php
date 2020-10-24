@@ -40,7 +40,7 @@
                 </div>
                 <div class="secondary-container">
                     <div class="image-container">
-                        <img src="assets/images/choco1.jpg">
+                        <img src="image/<?php echo $result[0]['image'];?>">
                     </div>
                     <div class="text-container">
                         <div class="content-label">

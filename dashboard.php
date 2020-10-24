@@ -45,13 +45,13 @@
         <div class="thread">
             <div class="clearfix">
                 <div class="dashboard-welcome">
-                    <p>Welcome, <?php echo $username; ?></p>
+                    <span>Welcome, <?php echo $username; ?></span>
                 </div>
                 <div class="dashboard-list-all">
-                    <p><a href="/search.php?key=#page=1">Lihat semua</a></p>
+                    <span><a href="/search.php?key=#page=1">View all products</a></span>
                 </div>
             </div>
-            <h1>Produk Terlaris</h1>
+            <h1>Top Selling</h1>
             <div class="dashboard-listing-container">
                 <?php echo $dashboardItemHTML; ?>
             </div>

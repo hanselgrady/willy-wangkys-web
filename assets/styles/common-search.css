@@ -33,6 +33,9 @@
     width: 25%;
     height: 160px;
     float: left;
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
 }
 
 .search-card-text {
