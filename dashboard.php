@@ -30,8 +30,15 @@
     <body>
         <?php include 'get-header.php';?>
         <div class="thread">
+            <div class="clearfix">
+                <div class="dashboard-welcome">
+                    <p>Welcome, wangky</p>
+                </div>
+                <div class="dashboard-list-all">
+                    <p><a href="/search.php?key=#page=1">Lihat semua</a></p>
+                </div>
+            </div>
             <h1>Produk Terlaris</h1>
-            <p>Content</p>
             <div class="dashboard-listing-container">
                 <?php echo $dashboardItemHTML; ?>
             </div>
