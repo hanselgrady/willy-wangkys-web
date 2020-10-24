@@ -6,13 +6,19 @@
     $connector = new Connector();
     $data = $connector->getAllData($query);
     if (count($data) > 0) {
-        //[$data] = $data;
-        setcookie('username', $data[0]['username'], time() + 86400 * 30, '/');
+        // [$data] = $data;
+        setcookie('username', 
+        $data[0]['email'], time() + 86400 * 30, '/');
         header('Location: /dashboard.php');
+        // print_r($data);
+
     }
     else {
         header('Location: /login.php?auth=invalid');
+
     }
     $connector->close();
+
+
 
 ?>
