@@ -1,6 +1,7 @@
 <?php 
-    include 'connector.php';
-    include 'validate-auth.php'; 
+    include_once 'connector.php';
+    include_once 'validate-auth.php'; 
+    include_once 'accdetail.php';
 
     if (!isset($_GET['itemID'])) {
         header('Location: /dashboard.php');

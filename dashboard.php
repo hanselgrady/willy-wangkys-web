@@ -1,6 +1,6 @@
 <?php 
-    include 'validate-auth.php'; 
-    include 'connector.php';    
+    include_once 'validate-auth.php'; 
+    include_once 'connector.php';    
 
     $query = "SELECT * FROM chocolate limit 10";
     $connector = new Connector();
