@@ -11,13 +11,15 @@ const searchQuery = (key, pageNum, maxItemPerPage) => {
                     searchResultListHTML = '';
                     for (item of response.items) {
                         searchResultListHTML +=
-                            '<a href="/detail.php?itemID=' + item.id + '" class="search-card-container">' +
+                            '<a href="/detail.php?itemID=' + item.chocoID + '" class="search-card-container">' +
                                 '<div class="search-card">' +
                                     '<div class="search-card-image"></div>' +
                                     '<div class="search-card-text">' +
                                         '<h2>' + item.name + '</h2>' +
-                                        '<p>' + item.description + '</p>' +
+                                        '<p>Sold: ' + item.amountSold + '</p>' +
                                         '<p>Rp' + item.price + '</p>' +
+                                        '<p>Stock: ' + item.amount + '</p>' +
+                                        '<p>' + item.description + '</p>' +
                                     '</div>' +
                                 '</div>' +
                             '</a>';
