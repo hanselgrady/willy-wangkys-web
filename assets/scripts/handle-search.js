@@ -24,6 +24,25 @@ const searchQuery = (key, pageNum, maxItemPerPage) => {
                     }
                     searchResultList.innerHTML = searchResultListHTML;
                 }
+                let paginations = document.getElementsByClassName("pagination");
+                if (paginations) {
+                    for (let pagination of paginations) {
+                        let newPaginationHTML = '';
+                        if (pageNum > 1)
+                            newPaginationHTML += '<a href="#page=' + (pageNum - 1) + '">&laquo</a>';
+                        for (let i = 0; i < 5; i++) {
+                            const p = pageNum > 2 ? i + pageNum - 2 : i + 1;
+                            if (p > Math.ceil(response.searchCount / maxItemPerPage)) break;
+                            if (p === pageNum) 
+                                newPaginationHTML += '<a href="#page=' + p + '" class="active">' + p + '</a>';
+                            else
+                                newPaginationHTML += '<a href="#page=' + p + '">' + p + '</a>';
+                        }
+                        if (pageNum < Math.ceil(response.searchCount / maxItemPerPage))
+                            newPaginationHTML += '<a href="#page=' + (pageNum + 1) + '">&raquo</a>';
+                        pagination.innerHTML = newPaginationHTML;
+                    }
+                }
             } else {
                 let searchResultList = document.getElementById('search-results');
                 if (searchResultList) {
@@ -77,21 +96,7 @@ const updatePagination = () => {
     let paginations = document.getElementsByClassName("pagination");
     if (paginations) {
         for (let pagination of paginations) {
-            for (let el of pagination.children) {
-                pagination.removeChild(el);
-            }
-            let newPaginationHTML = '';
-            if (pageNum > 1)
-                newPaginationHTML += '<a href="#page=' + (pageNum - 1) + '">&laquo</a>';
-            for (let i = 0; i < 5; i++) {
-                const p = pageNum > 2 ? i + pageNum - 2 : i + 1;
-                if (p === pageNum) 
-                    newPaginationHTML += '<a href="#page=' + p + '" class="active">' + p + '</a>';
-                else
-                    newPaginationHTML += '<a href="#page=' + p + '">' + p + '</a>';
-            }
-            newPaginationHTML += '<a href="#page=' + (pageNum + 1) + '">&raquo</a>';
-            pagination.innerHTML = newPaginationHTML;
+            pagination.innerHTML = '';
         }
     }
     let searchResultList = document.getElementById('search-results');
@@ -107,7 +112,7 @@ const updatePagination = () => {
                                 '</div>' +
                             '</a>';
     }
-    searchQuery(getSearchParamValue('key'), pageNum, 10);
+    searchQuery(getSearchParamValue('key'), pageNum, 5);
 }
 
 window.onload = () => {

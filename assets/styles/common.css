@@ -172,3 +172,16 @@ hr {
     color: #161616;
 }
 
+.dashboard-welcome p {
+    float: left;    
+}
+
+.dashboard-list-all p {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

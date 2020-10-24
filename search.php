@@ -1,4 +1,7 @@
 <?php
+
+    include 'validate-auth.php';
+
     $skey = "";
     if (isset($_GET['key'])) {
         $skey = $_GET['key'];
