@@ -1,4 +1,6 @@
-<?php include 'connector.php';    
+<?php 
+    include_once 'validate-auth.php'; 
+    include_once 'connector.php';    
 
     $query = "SELECT * FROM chocolate limit 10";
     $connector = new Connector();
@@ -7,7 +9,7 @@
     $dashboardItemHTML = '';
     foreach ($data as $row) {
         $dashboardItemHTML .= '
-                 <a href="#c" class="dashboard-card-container">
+                 <a href="/detail.php?itemID=' . $row['id'] . '" class="dashboard-card-container">
                     <div class="dashboard-card">
                         <div class="dashboard-card-image"></div>
                         <div class="dashboard-card-text">
@@ -17,6 +19,8 @@
                     </div>
                 </a>';
     }
+
+    $username = $_COOKIE['username'];
 
 ?>
 
@@ -30,8 +34,15 @@
     <body>
         <?php include 'get-header.php';?>
         <div class="thread">
+            <div class="clearfix">
+                <div class="dashboard-welcome">
+                    <p>Welcome, <?php echo $username; ?></p>
+                </div>
+                <div class="dashboard-list-all">
+                    <p><a href="/search.php?key=#page=1">Lihat semua</a></p>
+                </div>
+            </div>
             <h1>Produk Terlaris</h1>
-            <p>Content</p>
             <div class="dashboard-listing-container">
                 <?php echo $dashboardItemHTML; ?>
             </div>

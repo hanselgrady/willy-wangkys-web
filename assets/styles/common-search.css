@@ -52,7 +52,6 @@
 
 .pagination {
     display: inline-block;
-    padding: 5px;
     background-color: #f4f4f4;
     border-radius: 10px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -61,6 +60,7 @@
 .pagination a {
     float: left;
     padding: 10px 20px;
+    margin: 5px;
     text-decoration: none;
     color: #161616;
     border-radius: 10px;

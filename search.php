@@ -1,4 +1,7 @@
 <?php
+    include_once 'connector.php';
+    include_once 'validate-auth.php';
+
     $skey = "";
     if (isset($_GET['key'])) {
         $skey = $_GET['key'];
@@ -17,8 +20,8 @@
         <?php include 'get-header.php';?>
         <div class="thread">
             <h1>Pencarian untuk: <?php echo $skey; ?></h1>
-            <p>4 hasil pencarian</p>
-            <div id="pagination-top" class="pagination-centering">
+            <p id="search-count"></p>
+            <div class="pagination-centering">
                 <div class="pagination">
                     <a href="#" id="page-l">&laquo</a>
                     <a href="#" id="page-i1">1</a>
@@ -29,7 +32,7 @@
                     <a href="#" id="page-r">&raquo</a>
                 </div>
             </div>
-            <div class="search-listing-container">
+            <div class="search-listing-container" id="search-results">
                 <a href="#c" class="search-card-container">
                     <div class="search-card">
                         <div class="search-card-image"></div>
@@ -69,7 +72,7 @@
                     </div>
                 </a>
             </div>
-            <div id="pagination-bot" class="pagination-centering">
+            <div class="pagination-centering">
                 <div class="pagination">
                     <a href="#page=1" id="page-l">&laquo</a>
                     <a href="#page=2" id="page-i1">1</a>
@@ -82,6 +85,6 @@
             </div>
         </div>
         <?php include 'get-footer.php';?>
-        <script src="/assets/scripts/pagination.js"></script>
+        <script src="/assets/scripts/handle-search.js"></script>
     </body>
 </html>

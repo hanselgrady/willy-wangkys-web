@@ -20,9 +20,10 @@
                 die("<script> alert('Connection failed: {$this->connection->connect_error}') </script>");
             }
         }
-        public function run($query) {
-            if ($this->connection->query($query) === TRUE) {
-                /* echo "<script> alert('Query success') </script>"; */
+        
+        function run($query) {
+            if ($this->connection->query($query) == TRUE) {
+                echo "<script> alert('Query success') </script>";
             } else {
                 echo "<script> alert('Error: {$this->connection->error}') </script>";
             }

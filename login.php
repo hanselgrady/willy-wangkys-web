@@ -1,23 +1,46 @@
-<?php include 'connector.php';
-
-    $email_input = $_POST["email"];
-    $password_input = $_POST["password"];
-    $query = "SELECT * FROM user WHERE email = '{$email_input}' AND password = '{$password_input}'";
-    $connector = new Connector();
-    $data = $connector->getAllData($query);
-    if (count($data) > 0) {
-        echo "Success";
-        //[$data] = $data;
-        //$data = json_encode($connector->getAllData($query));
-        //echo $data;
+<?php
+    $invalidLoginVisibility = 'hidden';
+    if (isset($_GET['auth'])) {
+        if ($_GET['auth'] == 'invalid') {
+            $invalidLoginVisibility = 'visible';
+        }
     }
-    else {
-        $response = [
-            "status" => "404",
-            "message" => "Error User Not Found"
-        ];
-        echo json_encode($response);
-    }
-    $connector->close();
-
 ?>
+
+<!DOCTYPE HTML>
+<html lang="en" dir="lttr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="assets/styles/LoginRegister.css">
+    </head>
+    <body>
+        <div class="outer-box">
+            <h1>Willy Wangky Choco Factory</h1>
+            <form method="POST" action="handle-login.php">
+                <div class="input-area-login">
+                    <div class="component-wrapper">
+                        <div class="input-wrapper">
+                            <input text="text" id="email" name="email" placeholder="Email" required>
+                            <label>Email</label>
+                        </div>
+                    </div>
+                    <div class="component-wrapper">
+                        <div class="input-wrapper">
+                            <input text="text" type="password" id="password" name="password" placeholder="Password" required>
+                            <label>Password</label>
+                        </div>
+                    </div>
+                    <div class="invalid-login" style="visibility: <?php echo $invalidLoginVisibility; ?>;">
+                        <p id="error-login">Invalid username or password!</p>
+                    </div>
+                    <div class="component-wrapper">
+                        <div class="button-wrapper">
+                            <input type="submit" value="Login">
+                            <input type="button" onclick="location.href = 'register.php'" value="Register Here!">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

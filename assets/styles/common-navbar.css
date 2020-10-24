@@ -8,6 +8,10 @@ ul.navbar {
     position: relative;
 }
 
+ul.navbar * {
+    box-sizing: content-box;
+}
+
 ul.navbar h1 {
     margin: 5px 5px;
     padding: 5px 10px
