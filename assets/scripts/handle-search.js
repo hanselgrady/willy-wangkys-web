@@ -13,7 +13,7 @@ const searchQuery = (key, pageNum, maxItemPerPage) => {
                         searchResultListHTML +=
                             '<a href="/detail.php?itemID=' + item.id + '" class="search-card-container">' +
                                 '<div class="search-card">' +
-                                    '<div class="search-card-image"></div>' +
+                                    '<div class="search-card-image" style="background-image: url(\'/image/' + item.image + '\')"></div>' +
                                     '<div class="search-card-text">' +
                                         '<h2>' + item.name + '</h2>' +
                                         '<p>' + item.description + '</p>' +

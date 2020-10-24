@@ -6,6 +6,12 @@
 * DBMS MySQL
 
 ## Instalasi
+* Download / Clone repository
+* Install PHP
+* Install MySQL
+* Buat user baru di MySQL
+* Buat database
+* Masukkan file sql ke database
 
 ## Menjalankan Server
 * Buka terminal
@@ -22,6 +28,31 @@
 * Mahasiswa mampu  membuat sebuah layanan web dengan menggunakan PHP.
 * Mahasiswa mampu menggunakan AJAX 
 * Mahasiswa  memahami penangananan state dan perbedaan HTTP method.
+
+## Screenshot Aplikasi
+
+## Pembagian Tugas
+
+Setiap anggota kelompok diwajibkan untuk mengerjakan bagian frontend dan backend.
+
+### Frontend
+1. Login : 
+2. Register :
+3. Dashboard : 13518115
+4. Search Result : 13518115
+5. Chocolate Deatil :
+6. Transaction :
+7. Add Chocolate :
+
+### Backend
+1. Login : 
+2. Register : 
+3. Dashboard : 13518115
+4. Search Result : 13518115
+5. Chocolate Deatil :
+6. Transaction :
+7. Add Chocolate :
+
 
 ## Deskripsi Singkat
 

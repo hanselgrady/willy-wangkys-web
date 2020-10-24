@@ -164,7 +164,9 @@ hr {
     border-radius: 10px;
     width: auto;
     height: 160px;
-
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .dashboard-card-text {
@@ -176,12 +178,21 @@ hr {
     color: #161616;
 }
 
-.dashboard-welcome p {
+.dashboard-welcome {
     float: left;    
 }
 
-.dashboard-list-all p {
+.dashboard-list-all {
     float: right;
+    border-radius: 10px;
+    background-color: brown;
+    color: #f4f4f4;
+    padding: 10px;
+}
+
+.dashboard-list-all a {
+    color: #f4f4f4;
+    text-decoration: none;
 }
 
 .clearfix::after {
