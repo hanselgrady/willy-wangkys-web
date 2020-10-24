@@ -5,8 +5,10 @@
     $password_input = $_POST["password"];
     $query = "INSERT INTO user (username, email, password, superuser) VALUES ('{$username_input}', '{$email_input}', '{$password_input}', 0)";
     $connector = new Connector();
-    $connector->run($query);
-    //header("Location: http://localhost:8080");
+    $save = $connector->run($query);
+    if ($save) {
+        header("Location: login.html");
+    }
     $connector->close();
 
 ?>

@@ -30,13 +30,15 @@ function checkEmail() {
     data = email.value;
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            var resp = JSON.parse(this.responseText);
-            [resp] = resp;
-            if (resp != null) {
+            var patt = new RegExp("[\w-\.]+@([\w-]+\.)+[\w-]{2,4}");
+            var verd = patt.test(data);
+            if (!verd) {
                 document.getElementById("error-email").style.visibility = "visible";
+                document.getElementById("email").setCustomValidity("invalid");
             }
             else {
                 document.getElementById("error-email").style.visibility = "hidden";
+                document.getElementById("email").setCustomValidity("");
             }
         }
     };
@@ -46,9 +48,11 @@ function checkPassword() {
     data = password.value;
     if (data.length < 8) {
         document.getElementById("error-password").style.visibility = "visible";
+        document.getElementById("password").setCustomValidity("invalid");
     }
     else {
         document.getElementById("error-password").style.visibility = "hidden";
+        document.getElementById("password").setCustomValidity("");
     }
 }
 
@@ -57,8 +61,10 @@ function checkConfirmPassword() {
     conf = confirm.value;
     if (pass != conf) {
         document.getElementById("error-confirm").style.visibility = "visible";
+        document.getElementById("confirm").setCustomValidity("invalid");
     }
     else {
         document.getElementById("error-confirm").style.visibility = "hidden";
+        document.getElementById("confirm").setCustomValidity("");
     }
 }

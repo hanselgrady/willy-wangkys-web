@@ -20,7 +20,7 @@
                 die("<script> alert('Connection failed: {$this->connection->connect_error}') </script>");
             }
         }
-        function run($query) {
+        public function run($query) {
             if ($this->connection->query($query) === TRUE) {
                 /* echo "<script> alert('Query success') </script>"; */
             } else {
@@ -28,7 +28,7 @@
             }
         }
 
-        function getAllData($query) {
+        public function getAllData($query) {
             $result = $this->connection->query($query);
             while ($row = $result->fetch_assoc()) {
                 $rows[] = $row;
@@ -36,7 +36,7 @@
             return $rows;
         }
 
-        function close() {
+        public function close() {
             $this->connection->close();
         }
         

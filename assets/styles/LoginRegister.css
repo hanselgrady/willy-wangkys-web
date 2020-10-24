@@ -90,7 +90,7 @@ body {
     position: relative;
     float: left;
     left: -20px;
-    bottom: 0px;
+    bottom: 15px;
     padding-left: 50px;
 }
 
@@ -148,11 +148,12 @@ body {
     box-shadow: 0 0 0px red;
 }
 
-.input-area-register .component-wrapper .input-wrapper input:not(:placeholder-shown)valid {
+.input-area-register .component-wrapper .input-wrapper input:not(:placeholder-shown):valid {
     border: 2px solid green;
 }
 
 .input-area-login .component-wrapper .input-wrapper input:invalid {
+    border: 2px solid red;
     box-shadow: 0 0 0px red;
 }
 

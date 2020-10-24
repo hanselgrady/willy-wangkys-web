@@ -6,9 +6,10 @@
     $connector = new Connector();
     $data = $connector->getAllData($query);
     if (count($data) > 0) {
-        [$data] = $data;
-        $data = json_encode($connector->getAllData($query));
-        echo $data;
+        echo "Success";
+        //[$data] = $data;
+        //$data = json_encode($connector->getAllData($query));
+        //echo $data;
     }
     else {
         $response = [
