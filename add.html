@@ -4,17 +4,30 @@
         <title>Add Chocolate - Willy-Wanky</title>
     </head>
     <body>
-        <form action="add.php" method="post">
+        <form action="add.php" method="post" enctype="multipart/form-data">
             <label for="name">Name</label><br>
             <input type="text" name="name" required><br>
             <label for="price">Price</label><br>
             <input type="number" name="price" required><br>
             <textarea name="description" rows="10" cols="30" required>Description</textarea><br>
-            <label for="image">Select an image:</label><br>
-            <input type="file" id="image" name="image" accept="image/*"><br>
+            <h2>PHP Image Upload with Size Type Dimension Validation</h2>
+            <div class="form-row">
+                <div>Choose Image file:</div>
+                <div>
+                    <input type="file" class="file-input" name="file-input">
+                </div>
+            </div>
+        
+            </div>
             <label for="amount">Amount</label><br>
             <input type="number" name="amount" required><br>
-            <input type="submit">
+            <input type="submit" name = "upload">
         </form>
+        <?php if(!empty($response)) { ?>
+            <div class="response <?php echo $response["type"]; ?>
+                ">
+                <?php echo $response["message"]; ?>
+            </div>
+            <?php }?>
     </body>
 </html>

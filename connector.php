@@ -21,8 +21,8 @@
             }
         }
         function run($query) {
-            if ($this->connection->query($query) === TRUE) {
-                /* echo "<script> alert('Query success') </script>"; */
+            if ($this->connection->query($query) == TRUE) {
+                echo "<script> alert('Query success') </script>";
             } else {
                 echo "<script> alert('Error: {$this->connection->error}') </script>";
             }

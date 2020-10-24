@@ -1,5 +1,5 @@
 <?php
     if (isset($_COOKIES["username"]) == False) {
-        header("Location: /login.php");
+        header("Location: /login.html");
     }
 ?>
