@@ -118,7 +118,11 @@ body {
     font-size: 25px;
     border: none;
     min-width: 40%;
-    padding: 5px;
+}
+
+.component-wrapper .button-wrapper input:disabled {
+    color: brown;
+    background-color: gray;
 }
 
 .component-wrapper .input-wrapper input {
