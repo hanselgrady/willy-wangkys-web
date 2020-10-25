@@ -25,7 +25,7 @@ if (isset($_COOKIE['username']) && isSuperuser($_COOKIE['username'])) {
                 <li><a href="/add.php">Add New Product</a></li>';
 } else {
     echo '
-                <li><a href="#">History</a></li>';
+                <li><a href="/history.php">History</a></li>';
 }
 echo '
             </ul>
