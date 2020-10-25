@@ -75,7 +75,7 @@
                                 <div class="content-label">
                                     <label for="amount">Amount: </label>
                                 </div>    
-                            <input type="number" id="add-amount" name="amount"><br><br>
+                            <input type="number" id="add-amount" name="amount" min ="0" ><br><br>
                             <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
                             <div class="button-container">
                                 <input type="button" onclick="cancelAddStock()" value="Cancel"></button>
@@ -89,7 +89,7 @@
                                 <div class="content-label">
                                     <label for="amount">Amount: </label>
                                 </div>    
-                            <input type="number" id="buy-amount" name="amount" value="1"><br><br>
+                            <input type="number" id="buy-amount" name="amount" value="1" min ="0" max = "<?php echo $result[0]['amount'];?>"> <br><br>
                             <textarea name="address" rows="10" cols="30" required placeholder="Address"></textarea><br>
                             <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
                             <div class="button-container">
