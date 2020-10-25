@@ -60,6 +60,8 @@
 
 ![](screenshots/Screenshot%20from%202020-10-25%2016-21-25.png)
 
+![](screenshots/add.png)
+
 ## Pembagian Tugas
 
 ### Frontend
@@ -222,15 +224,7 @@ Seluruh detail pada coklat harus diisi sebagai persyaratan coklat dapat ditambah
 * Basis data didefinisikan sendiri.
 
 
-## Petunjuk Pengerjaan
 
-6. Buatlah file README yang berisi:
-    * Deskripsi aplikasi web
-    * Daftar requirement
-    * Cara instalasi
-    * Cara menjalankan server
-    * Screenshot tampilan aplikasi, dan
-    * Penjelasan mengenai pembagian tugas masing-masing anggota (lihat formatnya pada bagian pembagian tugas).
 
 
 
