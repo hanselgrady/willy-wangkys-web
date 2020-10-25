@@ -50,7 +50,7 @@
                             <input class="amount-box" type="number" name="amount" required min ="0"><br>
                             <div class ="button-container">
                             <br>
-                            <input type="submit" name = "upload">
+                            <input type="submit" value ="Add Chocolate" name = "upload">
                             </div>
                         </form>
                     </div>
