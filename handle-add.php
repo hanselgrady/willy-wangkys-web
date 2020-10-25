@@ -59,6 +59,12 @@
     else {
         $chocolate_name = $_POST["name"];
         $chocolate_price = $_POST["price"];
+        if($chocolate_price < 0 || $chocolate_amount < 0) {
+            $response = array(
+                "type" => "error",
+                "message" => "Invalid number input"
+            );
+        }
         $chocolate_description = $_POST["description"];
         $chocolate_image = "";
                 $fileinfo = @getimagesize($_FILES["file-input"]["tmp_name"]);
