@@ -64,36 +64,51 @@
                             <label><b>Description</b></label>
                         </div>
                         <label id="Description"><?php echo $result[0]['description'];?></label>
+                        <div id="detail-form-stock" style= "display:none">
+                            <form action="/handle-detail.php" method = "post" >
+                                    <div class="content-label">
+                                        <label for="amount">Amount: </label>
+                                    </div>    
+                                <input type="number" id="amount" name="amount"><br><br>
+                                <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
+                                <div class="button-container">
+                                <button> 
+                                    <input type="submit" value="Submit">
+                                </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div id="detail-form-buy" style= "display:none">
+                            <form action="/handle-detail.php" method = "post" >
+                                    <div class="content-label">
+                                        <label for="amount">Amount: </label>
+                                    </div>    
+                                <input type="number" id="amount" name="amount"><br><br>
+                                <textarea name="address" rows="10" cols="30" required placeholder="Address"></textarea><br>
+                                <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
+                                <div class="button-container">
+                                <button> 
+                                    <input type="submit" value="Submit">
+                                </button>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
-                <div id="detail-form" style= "display:none">
-                    <div class="secondary-container">
-                        <form action="/detail-handler.php" method = "post" >
-                                <div class="content-label">
-                                    <label for="amount">Amount: </label>
-                                </div>    
-                            <input type="number" id="amount" name="amount"><br><br>
-                            <input type="hidden" id="test" name="test" value = "stringtest">
-                            <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
-                            <div class="button-container">
-                            <button> 
-                                <input type="submit" value="Submit">
-                            </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                
                 <div class="button-container">
                     <?php
                         
                         if (isSuperuser($_COOKIE['username'])) {
                             echo "
-                            <script src='detail-button.js'></script>
+                            <script src='/assets/scripts/detail-button.js'></script>
                             <button id = 'detail-add-stock-button' onClick='detailAddStock()'>Add Stock</button>
                             ";
                         } else {
                             echo "
-                            <script src='detail-button.js'></script>
+                            <script src='/assets/scripts/detail-button.js'></script>
                             <button id = 'detail-buy-button' onClick='detailBuy()'>Buy Now</button>
                             ";
                         }

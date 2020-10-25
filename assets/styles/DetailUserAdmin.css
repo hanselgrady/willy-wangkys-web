@@ -154,7 +154,7 @@ body {
     float: right;
 }
 
-.button-container button {
+.button-container button, .button-container input[type="submit"] {
     left: 20px;
     min-width: 300px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -184,7 +184,9 @@ body {
     align-self: center;
 }
 
-input[type="submit"], button:hover input[type="submit"] , button:visited:hover input[type="submit"] , button:active input[type="submit"]  {
+.button-container input[type="submit"]:hover,
+.button-container input[type="submit"]:visited:hover,
+.button-container input[type="submit"]:active  {
     left: 20px;
     min-width: 300px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
