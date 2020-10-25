@@ -10,6 +10,7 @@ if (isset($_POST["choco_id"]) && isset($_POST["amount"]) && isset($_COOKIE["user
         SET amount = amount + {$amount}
         WHERE id = {$id};
     ";
-    $connector->run($sql);
+    $connector->run($query);
+    header("Location: /detail.php?itemID={$id}");
 }
 ?>
