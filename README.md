@@ -13,10 +13,12 @@
 * Buka terminal
 * Lakukan instalasi web server yang mendukung PHP.
 * Buat user baru di MySQL dengan username 'willywangky' dan password 'willywangky'.
-* Jalankan command berikut untuk create database
+* Jalankan command berikut untuk create database dan user willywangky serta grant privileges
     ```
         mysql -u <username> -p
         CREATE DATABASES willywangky;
+        CREATE USER 'willywangky'@'localhost' IDENTIFIED BY 'willywangky';
+        GRANT ALL PRIVILEGES ON *.* TO 'willywangky'@'localhost';
     ```
 * Keluar dari mysql terminal
 * Jalankan command berikut untuk mengimport database
