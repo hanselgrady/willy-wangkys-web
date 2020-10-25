@@ -34,8 +34,8 @@
     </head>
     <body>
         <?php include 'get-header.php';?>
-        <div class="opacity-layer">
-            <div class="main-container">
+        <div class="opacity-layer clearfix">
+            <div class="main-container clearfix">
                 <div class="label-title">
                     <label id="LabelTitle"><?php echo $result[0]['name'];?></label>
                 </div>
@@ -70,33 +70,35 @@
                     </div>
                 </div>
                 <div class="secondary-container clearfix">
-                    <div id="detail-form-stock" style= "display:none">
-                        <form action="/handle-detail.php" method = "post" >
-                                <div class="content-label">
-                                    <label for="amount">Amount: </label>
-                                </div>    
-                            <input type="number" id="add-amount" name="amount" min ="0" ><br><br>
-                            <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
-                            <div class="button-container">
-                                <input type="button" onclick="cancelAddStock()" value="Cancel"></button>
-                                <input type="submit" value="Add">
-                            </div>
-                        </form>
-                    </div>
+                    <div class="text-container">
+                        <div id="detail-form-stock" style= "display:none">
+                            <form action="/handle-detail.php" method = "post" >
+                                    <div class="content-label">
+                                        <label for="amount">Amount: </label>
+                                    </div>    
+                                <input class="amount-box" type="number" id="add-amount" name="amount" min ="0" ><br><br>
+                                <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
+                                <div class="button-container">
+                                    <input type="button" onclick="cancelAddStock()" value="Cancel"></button>
+                                    <input type="submit" value="Add">
+                                </div>
+                            </form>
+                        </div>
 
-                    <div id="detail-form-buy" style= "display:none">
-                        <form action="/handle-detail.php" method = "post" >
-                                <div class="content-label">
-                                    <label for="amount">Amount: </label>
-                                </div>    
-                            <input type="number" id="buy-amount" name="amount" value="1" min ="0" max = "<?php echo $result[0]['amount'];?>"> <br><br>
-                            <textarea name="address" rows="10" cols="30" required placeholder="Address"></textarea><br>
-                            <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
-                            <div class="button-container">
-                                <input type="button" onclick="cancelBuy()" value="Cancel"></button>
-                                <input type="submit" value="Buy" id="buy-button">
-                            </div>
-                        </form>
+                        <div id="detail-form-buy" style= "display:none">
+                            <form action="/handle-detail.php" method = "post" >
+                                    <div class="content-label">
+                                        <label for="amount">Amount: </label>
+                                    </div>    
+                                <input class="amount-box" type="number" id="buy-amount" name="amount" value="1" min ="0" max = "<?php echo $result[0]['amount'];?>"> <br><br>
+                                <textarea class="address-box" name="address" rows="4" cols="30" required placeholder="Address"></textarea><br>
+                                <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
+                                <div class="button-container">
+                                    <input type="button" onclick="cancelBuy()" value="Cancel"></button>
+                                    <input type="submit" value="Buy" id="buy-button">
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="button-container">
@@ -116,5 +118,6 @@
             </div>
         </div>
         <script src='/assets/scripts/detail-button.js'></script>
+        <script>verifyBuyAmount();</script>
     </body>
 </html>

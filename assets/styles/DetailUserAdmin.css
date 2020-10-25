@@ -8,12 +8,10 @@
 }
 
 body {
-    display: flex;
     align-items: center;
     justify-content: center;
     background-image: url("../images/loginwallpaper.jpg");
     background-size: cover;
-    overflow: hidden;
 }
 
 .navigator {
@@ -97,22 +95,16 @@ body {
 }
 
 .opacity-layer {
-    position: absolute;
-    top: 60px;
+    margin: 20px 20%;
+    padding: 10px 10px;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.6);
-    min-width: 100%;
-    min-height: 90%;
 }
 
 .opacity-layer .main-container {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
+    padding: 20px 20px;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.6);
-    min-width: 90%;
-    min-height: 80%;
 }
 
 .main-container .label-title label {
@@ -125,10 +117,10 @@ body {
     position: relative;
     font-family: 'KoHo', sans-serif;
     padding-left: 20px;
-    min-height: 150px;
 }
 
 .secondary-container .image-container img{
+    margin-right: 10px;
     border: 1px solid white;
     padding: 5px;
     width: 250px;
@@ -138,7 +130,6 @@ body {
 .secondary-container .text-container {
     font-size: 16px;
     position: relative;
-    left: 20px;
     max-width: 1180px;
 }
 
@@ -147,9 +138,6 @@ body {
 }
 
 .button-container {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
     float: right;
 }
 
@@ -157,7 +145,7 @@ body {
 input[type="submit"],
 input[type="button"] {
     left: 20px;
-    min-width: 300px;
+    min-width: 200px;
     font-family: 'KoHo', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
@@ -176,7 +164,7 @@ input[type="button"] {
 input[type="submit"]:hover,
 input[type="button"]:hover {
     left: 20px;
-    min-width: 300px;
+    min-width: 200px;
     font-family: 'KoHo', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
@@ -191,7 +179,7 @@ input[type="button"]:hover {
 
 input[type="submit"]:disabled {
     left: 20px;
-    min-width: 300px;
+    min-width: 200px;
     font-family: 'KoHo', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
@@ -200,6 +188,31 @@ input[type="submit"]:disabled {
     text-decoration: none;
     border: none;
     padding: 10px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.amount-box {
+    font-size: 1.5em;
+    font-family: 'KoHo', sans-serif;
+    text-align: center;
+    min-width: 300px;
+    background-color: #f4f4f4;
+    color: #161616;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.address-box {
+    font-size: 1em;
+    font-family: 'KoHo', sans-serif;
+    width: 100%;
+    background-color: #f4f4f4;
+    color: #161616;
+    padding: 10px;
+    border: none;
     border-radius: 10px;
     align-self: center;
 }

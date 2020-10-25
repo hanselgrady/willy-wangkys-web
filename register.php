@@ -7,11 +7,11 @@
     <body>
         <div class="outer-box">
             <h1>Willy Wangky Choco Factory</h1>
-            <form method="POST" action="">
+            <form method="POST" action="/handle-register.php">
             <div class="input-area-register">
                 <div class="component-wrapper">
                     <div class="input-wrapper">
-                        <input text="text" name="usrename" placeholder="e.g. johndoe13" id="username" onkeyup="checkUsername(this.value)" required>
+                        <input text="text" name="username" placeholder="e.g. johndoe13" id="username" onkeyup="checkUsername(this.value)" required>
                         <label>Username</label>
                     </div>
                     <div class="invalid-register">
