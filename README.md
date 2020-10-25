@@ -6,8 +6,13 @@
 * DBMS MySQL
 
 ## Instalasi
-* Pastikan sudah memenuhi requirement yang ada di daftar requirement
+* Lakukan instalasi MySQL. petunjuk instalasi dapat ditemukan di:
+    * [Versi 5.7](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
+    * [Versi 8.0](https://dev.mysql.com/doc/refman/8.0/en/installing.html)
+
 * Buka terminal
+* Lakukan instalasi web server yang mendukung PHP.
+* Buat user baru di MySQL dengan username 'willywangky' dan password 'willywangky'.
 * Jalankan command berikut untuk create database
     ```
         mysql -u <username> -p
@@ -22,6 +27,10 @@
     ```
         extension=mysqli
     ```
+* Untuk sistem operasi linux, install ekstensi menggunakan
+    ```
+        sudo apt install php-mysql
+    ```
 ## Menjalankan Server
 * Buka terminal
 * Jalankan command berikut:
@@ -31,6 +40,39 @@
 * Buka web browser
 * Buka alamat localhost:8000
 
+## Pembagian Tugas
+
+### Frontend
+1. Login : 13518140
+2. Register : 13518140, 13518115
+3. Dashboard : 13518115
+4. Search : 13518115
+5. Detail : 13518140, 13518115
+6. Add Stock : 13518141
+7. Buy : 13518141
+8. History : 13518141
+9. Add Chocolate : 13518141
+
+### Backend
+1. Login : 13518140
+2. Register : 13518140
+3. Dashboard : 13518115
+4. Search : 13518115
+5. Detail : 13518115
+6. Add Stock : 13518141
+7. Buy : 13518141
+8. History : 13518141
+9. Add Chocolate : 13518141
+10. Database : 13518141
+
+# Spesifikasi Tugas
+
+## Tujuan Pembelajaran Tugas Besar 1
+
+* Mahasiswa mampu membuat sebuah aplikasi web dengan menggunakan HTML, CSS dan JS.
+* Mahasiswa mampu  membuat sebuah layanan web dengan menggunakan PHP.
+* Mahasiswa mampu menggunakan AJAX 
+* Mahasiswa  memahami penangananan state dan perbedaan HTTP method.
 
 ## Deskripsi Singkat
 
@@ -172,25 +214,6 @@ Seluruh detail pada coklat harus diisi sebagai persyaratan coklat dapat ditambah
 
 
 
-## Pembagian Tugas
 
-Setiap anggota kelompok diwajibkan untuk mengerjakan bagian frontend dan backend.
-
-### Frontend
-1. Login : 
-2. Register : 
-3. Add : 13518xxx, 13518141
-4. Add Stock : 13518xxx, 13518141
-5. History : 13518141
-6. Buy : 13518xxx, 13518141
-
-### Backend
-1. Login : 13518xxx, 13518xxx
-2. Register : 13518xxx
-3. Add : 13518xxx, 13518141
-4. Add Stock : 13518xxx, 13518141
-5. History : 13518141
-6. Buy : 13518xxx, 13518141
-7. Database : 13518141
 
 

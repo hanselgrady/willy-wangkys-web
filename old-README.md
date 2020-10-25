@@ -6,7 +6,32 @@
 * DBMS MySQL
 
 ## Instalasi
-
+* Lakukan instalasi MySQL. petunjuk instalasi dapat ditemukan di:
+    * [Versi 5.7](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
+    * [Versi 8.0](https://dev.mysql.com/doc/refman/8.0/en/installing.html)
+* Lakukan instalasi web server yang mendukung PHP.
+* Buat user baru di MySQL dengan username 'willywangky' dan password 'willywangky'.
+* Buka mysql dengan command
+    ```
+        mysql -u <username> -p
+    ```
+* Jalankan command berikut untuk create database
+    ```
+        CREATE DATABASES willywangky;
+    ```
+* Keluar dari mysql terminal
+* Jalankan command berikut untuk mengimport database
+    ```
+        mysql -u <username> -p willywangky < db/willywangky.sql
+    ```
+* Pastikan file php.ini mengaktifkan extension mysqli dengan cara membuka file php.ini dan uncomment line hingga sebagai berikut
+    ```
+        extension=mysqli
+    ```
+* Untuk sistem operasi linux, install ekstensi menggunakan
+    ```
+        sudo apt install php-mysql
+    ```
 ## Menjalankan Server
 * Buka terminal
 * Jalankan command berikut:
@@ -196,7 +221,6 @@ Deadline tugas adalah pada hari Minggu, 25 Oktober 2020 pukul 19.00 WIB. Waktu p
 
 ## Pembagian Tugas
 
-Setiap anggota kelompok diwajibkan untuk mengerjakan bagian frontend dan backend.
 
 ### Frontend
 1. Login : 13518xxx, 13518xxx
