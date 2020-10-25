@@ -23,7 +23,6 @@ else if (isset($_POST["amount"]) && isset($_COOKIE["username"]) && (isset($_POST
     $id = $_POST["choco_id"];
     $amount = $_POST["amount"];
     $query_uname = "SELECT id FROM user WHERE username='{$_COOKIE['username']}'";
-    echo $query_uname; 
     $query = "
         SELECT chocolate.id AS chocoID, price, chocolate.amount AS amount
         FROM chocolate LEFT OUTER JOIN transaction
