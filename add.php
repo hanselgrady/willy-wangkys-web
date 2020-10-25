@@ -20,7 +20,7 @@
                 <label for="name">Name</label><br>
                 <input type="text" name="name" required><br>
                 <label for="price">Price</label><br>
-                <input type="number" name="price" required><br>
+                <input type="number" name="price" required min= "0"><br>
                 <textarea name="description" rows="10" cols="30" required placeholder="Description"></textarea><br>
                 <h2>PHP Image Upload with Size Type Dimension Validation</h2>
                 <div class="form-row">
