@@ -25,7 +25,6 @@
                 '<td>' . $row['total_price'] . '</td>' .
                 '<td>' . $row['date'] . '</td>' .
                 '<td>' . $row['time'] . '</td>' .
-
                 '<td>' . $row['address'] . '</td>' 
                 ;
 
@@ -40,29 +39,28 @@
         <title>Transaction History - Willy Wanky Choco Factory</title>
         <link rel="stylesheet" type="text/css" href="/assets/styles/common.css">
         <link rel="stylesheet" type="text/css" href="/assets/styles/common-navbar.css">
-        <link rel="stylesheet" type="text/css" href="/assets/styles/common-table.css">
+        <link rel="stylesheet" type="text/css" href="/assets/styles/table-history.css">
     </head>
     <body>
         <?php include 'get-header.php';?>
         <div class="thread">
         <h1>Transaction History</h1>
         <div class="table-container">
-        <table class="common-table" border='1'>
-        <tr>
-            <b>
-            <th>Chocolate Name</th>
-            <th>Amount</th>
-            <th>Total Price</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Address</th>
-            </b>
-        </tr>
-        <?php echo $dashboardItemHTML; ?>
-        </table>
+            <table border='1' class="common-table">
+            <tr>
+                <th>Chocolate Name</th>
+                <th>Amount</th>
+                <th>Total Price</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Address</th>
+            </tr>
+            <?php echo $dashboardItemHTML; ?>
+            </table>
+            
+            <script src="/assets/scripts/handle-search.js"></script>
         </div>
         </div>
-        <?php include 'get-footer.php';?>
-        <script src="/assets/scripts/handle-search.js"></script>
     </body>
+    <?php include 'get-footer.php';?>
 </html>
