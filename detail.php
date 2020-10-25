@@ -39,11 +39,14 @@
                 <div class="label-title">
                     <label id="LabelTitle"><?php echo $result[0]['name'];?></label>
                 </div>
-                <div class="secondary-container">
+                <div class="secondary-container clearfix">
                     <div class="image-container">
                         <img src="image/<?php echo $result[0]['image'];?>">
                     </div>
                     <div class="text-container">
+                        <div class="content-label" id="item-label" style="display:none;">
+                            <label><b id="item-name"><?php echo $result[0]['name'];?></b></label>
+                        </div>
                         <div class="content-label">
                             <label><b>Amount sold : </b></label>
                             <label id="Sold"><?php echo $result[0]['amountSold'];?></label>
@@ -70,14 +73,14 @@
                     <div class="secondary-container">
                         <form action="/detail-handler.php" method = "post" >
                                 <div class="content-label">
-                                    <label for="amount">Amount: </label>
+                                    <label for="amount">Amount to add: </label>
                                 </div>    
                             <input type="number" id="amount" name="amount"><br><br>
                             <input type="hidden" id="test" name="test" value = "stringtest">
                             <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
                             <div class="button-container">
-                            <input type="submit" value="Submit">
                             <input type="button" onclick="cancelAddStock()" value="Cancel"></button>
+                            <input type="submit" value="Add">
                             </div>
                         </form>
                     </div>
