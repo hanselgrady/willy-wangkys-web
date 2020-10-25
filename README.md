@@ -6,6 +6,10 @@
 * DBMS MySQL
 
 ## Instalasi
+* Lakukan instalasi MySQL. petunjuk instalasi dapat ditemukan di:
+    * [Versi 5.7](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
+    * [Versi 8.0](https://dev.mysql.com/doc/refman/8.0/en/installing.html)
+* Lakukan instalasi PHO 
 
 ## Menjalankan Server
 * Buka terminal
@@ -15,6 +19,32 @@
     ```
 * Buka web browser
 * Buka alamat localhost:8000
+
+## Pembagian Tugas
+
+### Frontend
+1. Login : 13518
+2. Register : 13518
+3. Dashboard : 13518115
+4. Search : 13518115
+5. Detail :
+6. Add Stock :
+7. Buy :
+8. History :
+9. Add Chocolate :
+
+### Backend
+1. Login : 13518
+2. Register : 13518
+3. Dashboard : 13518115
+4. Search : 13518115
+5. Detail :
+6. Add Stock :
+7. Buy :
+8. History :
+9. Add Chocolate :
+
+# Spesifikasi Tugas
 
 ## Tujuan Pembelajaran Tugas Besar 1
 
