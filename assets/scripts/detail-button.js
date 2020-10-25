@@ -32,3 +32,18 @@ function cancelBuy() {
     document.getElementById("item-label").style.display = "none";
 
 }
+
+let buyButton = document.getElementById("buy-button");
+let buyAmount = document.getElementById("buy-amount");
+let stockAmount = document.getElementById("StockAmount");
+
+function verifyBuyAmount() {
+    if (parseInt(buyAmount.value) > 0 && parseInt(buyAmount.value) <= parseInt(stockAmount.innerHTML)) {
+        buyButton.disabled = false;
+    } else {
+        buyButton.disabled = true;
+    }
+}
+
+buyAmount.onkeyup = verifyBuyAmount;
+buyAmount.onchange = verifyBuyAmount;
