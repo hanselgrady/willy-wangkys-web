@@ -123,7 +123,7 @@ body {
 
 .main-container .secondary-container {
     position: relative;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'KoHo', sans-serif;
     padding-left: 20px;
     min-height: 150px;
 }
@@ -181,6 +181,21 @@ input[type="button"]:hover {
     font-weight: bold;
     font-size: 1.5em;
     background-color: white;
+    color: brown;
+    text-decoration: none;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+input[type="submit"]:disabled {
+    left: 20px;
+    min-width: 300px;
+    font-family: 'KoHo', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: gray;
     color: brown;
     text-decoration: none;
     border: none;

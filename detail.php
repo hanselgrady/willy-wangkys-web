@@ -57,11 +57,11 @@
                         </div>
                         <div class="content-label">
                             <label><b>Amount : </b></label>
-                            <label id="Amount"><?php echo $result[0]['amount'];?></label>
+                            <label id="StockAmount"><?php echo $result[0]['amount'];?></label>
                         </div>
                         <div class="content-label">
                             <label><b>id : </b></label>
-                            <label id="Amount"><?php echo $result[0]['chocoID'];?></label>
+                            <label id="ChocoID"><?php echo $result[0]['chocoID'];?></label>
                         </div>
                         <div class="content-label">
                             <label><b>Description</b></label>
@@ -75,7 +75,7 @@
                                 <div class="content-label">
                                     <label for="amount">Amount: </label>
                                 </div>    
-                            <input type="number" id="amount" name="amount"><br><br>
+                            <input type="number" id="add-amount" name="amount"><br><br>
                             <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
                             <div class="button-container">
                                 <input type="button" onclick="cancelAddStock()" value="Cancel"></button>
@@ -89,12 +89,12 @@
                                 <div class="content-label">
                                     <label for="amount">Amount: </label>
                                 </div>    
-                            <input type="number" id="amount" name="amount"><br><br>
+                            <input type="number" id="buy-amount" name="amount" value="1"><br><br>
                             <textarea name="address" rows="10" cols="30" required placeholder="Address"></textarea><br>
                             <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
                             <div class="button-container">
                                 <input type="button" onclick="cancelBuy()" value="Cancel"></button>
-                                <input type="submit" value="Buy">
+                                <input type="submit" value="Buy" id="buy-button">
                             </div>
                         </form>
                     </div>
@@ -104,12 +104,10 @@
                         
                         if (isSuperuser($_COOKIE['username'])) {
                             echo "
-                            <script src='/assets/scripts/detail-button.js'></script>
                             <button id = 'detail-add-stock-button' onClick='detailAddStock()'>Add Stock</button>
                             ";
                         } else {
                             echo "
-                            <script src='/assets/scripts/detail-button.js'></script>
                             <button id = 'detail-buy-button' onClick='detailBuy()'>Buy Now</button>
                             ";
                         }
@@ -117,5 +115,6 @@
                 </div>
             </div>
         </div>
+        <script src='/assets/scripts/detail-button.js'></script>
     </body>
 </html>
