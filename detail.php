@@ -91,9 +91,12 @@
                                     <div class="content-label">
                                         <label for="amount">Amount: </label>
                                     </div>    
-                                <input class="amount-box" type="number" id="buy-amount" name="amount" value="1" min ="0" max = "<?php echo $result[0]['amount'];?>"> <br><br>
+                                <input class="amount-box" type="number" id="buy-amount" name="amount" value="1" min ="0" max = "<?php echo $result[0]['amount'];?>"> 
+                                <span id="total-price">Total Price:</span>
+                                <br><br>
                                 <textarea class="address-box" name="address" rows="4" cols="30" required placeholder="Address"></textarea><br>
                                 <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
+                                <input type="hidden" id="item-price" name="item-price" value= "<?php echo $result[0]['price'] ?>" />
                                 <div class="button-container">
                                     <input type="button" onclick="cancelBuy()" value="Cancel"></button>
                                     <input type="submit" value="Buy" id="buy-button">

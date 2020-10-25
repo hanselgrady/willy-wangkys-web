@@ -36,6 +36,8 @@ function cancelBuy() {
 let buyButton = document.getElementById("buy-button");
 let buyAmount = document.getElementById("buy-amount");
 let stockAmount = document.getElementById("StockAmount");
+let totalPrice = document.getElementById("total-price");
+let itemPrice = document.getElementById("item-price");
 
 function verifyBuyAmount() {
     if (parseInt(buyAmount.value) > 0 && parseInt(buyAmount.value) <= parseInt(stockAmount.innerHTML)) {
@@ -43,6 +45,8 @@ function verifyBuyAmount() {
     } else {
         buyButton.disabled = true;
     }
+    totalPrice.innerHTML = 'Total Price: Rp' + (parseInt(buyAmount.value) * parseInt(itemPrice.value));
+
 }
 
 buyAmount.onkeyup = verifyBuyAmount;
