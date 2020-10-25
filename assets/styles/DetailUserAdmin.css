@@ -137,6 +137,10 @@ body {
     padding-bottom: 10px;
 }
 
+.content-label label{
+    font-weight: bold;
+}
+
 .button-container {
     float: right;
 }
@@ -205,7 +209,7 @@ input[type="submit"]:disabled {
     align-self: center;
 }
 
-.address-box {
+.address-box, .description-box, .name-box {
     font-size: 1em;
     font-family: 'KoHo', sans-serif;
     width: 100%;
@@ -216,6 +220,8 @@ input[type="submit"]:disabled {
     border-radius: 10px;
     align-self: center;
 }
+
+
 
 /* input[type="submit"], button:hover input[type="submit"] , button:visited:hover input[type="submit"] , button:active input[type="submit"]  { */
 /*     left: 20px; */
