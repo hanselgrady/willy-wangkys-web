@@ -40,6 +40,24 @@
 * Buka web browser
 * Buka alamat localhost:8000
 
+# Screenshot Aplikasi
+
+![](screenshots/Screenshot%20from%202020-10-25%2016-13-09.png)
+
+![](screenshots/Screenshot%20from%202020-10-25%2016-14-09.png)
+
+![](screenshots/Screenshot%20from%202020-10-25%2016-14-24.png)
+
+![](screenshots/Screenshot%20from%202020-10-25%2016-14-45.png)
+
+![](screenshots/Screenshot%20from%202020-10-25%2016-15-33.png)
+
+![](screenshots/Screenshot%20from%202020-10-25%2016-16-13.png)
+
+![](screenshots/Screenshot%20from%202020-10-25%2016-16-26.png)
+
+![](screenshots/Screenshot%20from%202020-10-25%2016-21-25.png)
+
 ## Pembagian Tugas
 
 ### Frontend
