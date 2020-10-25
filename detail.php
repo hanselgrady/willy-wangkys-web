@@ -73,7 +73,7 @@
                                 <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
                                 <div class="button-container">
                                 <button> 
-                                    <input type="submit" value="Submit">
+                                    <input type="submit" value="Add">
                                 </button>
                                 </div>
                             </form>
@@ -89,7 +89,7 @@
                                 <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
                                 <div class="button-container">
                                 <button> 
-                                    <input type="submit" value="Submit">
+                                    <input type="submit" value="Buy">
                                 </button>
                                 </div>
                             </form>
