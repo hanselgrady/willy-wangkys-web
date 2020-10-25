@@ -24,7 +24,6 @@
                 '<td>' . $row['total_price'] . '</td>' .
                 '<td>' . $row['date'] . '</td>' .
                 '<td>' . $row['time'] . '</td>' .
-
                 '<td>' . $row['address'] . '</td>' 
                 ;
 
@@ -39,23 +38,26 @@
         <title>Add Chocolate - Willy-Wanky</title>
         <link rel="stylesheet" type="text/css" href="/assets/styles/common.css">
         <link rel="stylesheet" type="text/css" href="/assets/styles/common-navbar.css">
+        <link rel="stylesheet" type="text/css" href="/assets/styles/table-history.css">
+
     </head>
     <body>
         <?php include 'get-header.php';?>
-        <table border='1'>
-        <tr>
-            <b>
-            <th>Chocolate Name</th>
-            <th>Amount</th>
-            <th>Total Price</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Address</th>
-            </b>
-        </tr>
-        <?php echo $dashboardItemHTML; ?>
-        </table>
-        <?php include 'get-footer.php';?>
-        <script src="/assets/scripts/handle-search.js"></script>
+        <div class="thread">
+            <table border='1'>
+            <tr>
+                <th>Chocolate Name</th>
+                <th>Amount</th>
+                <th>Total Price</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Address</th>
+            </tr>
+            <?php echo $dashboardItemHTML; ?>
+            </table>
+            
+            <script src="/assets/scripts/handle-search.js"></script>
+        </div>
     </body>
+    <?php include 'get-footer.php';?>
 </html>
