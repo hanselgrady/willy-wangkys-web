@@ -6,7 +6,22 @@
 * DBMS MySQL
 
 ## Instalasi
-
+* Pastikan sudah memenuhi requirement yang ada di daftar requirement
+* Buka terminal
+* Jalankan command berikut untuk create database
+    ```
+        mysql -u <username> -p
+        CREATE DATABASES willywangky;
+    ```
+* Keluar dari mysql terminal
+* Jalankan command berikut untuk mengimport database
+    ```
+        mysql -u <username> -p willywangky < db/willywangky.sql
+    ```
+* Pastikan file php.ini mengaktifkan extension mysqli dengan cara membuka file php.ini dan uncomment line hingga sebagai berikut
+    ```
+        extension=mysqli
+    ```
 ## Menjalankan Server
 * Buka terminal
 * Jalankan command berikut:
@@ -16,12 +31,6 @@
 * Buka web browser
 * Buka alamat localhost:8000
 
-## Tujuan Pembelajaran Tugas Besar 1
-
-* Mahasiswa mampu membuat sebuah aplikasi web dengan menggunakan HTML, CSS dan JS.
-* Mahasiswa mampu  membuat sebuah layanan web dengan menggunakan PHP.
-* Mahasiswa mampu menggunakan AJAX 
-* Mahasiswa  memahami penangananan state dan perbedaan HTTP method.
 
 ## Deskripsi Singkat
 
@@ -150,38 +159,9 @@ Seluruh detail pada coklat harus diisi sebagai persyaratan coklat dapat ditambah
 * Jam pada aplikasi web mengacu pada jam lokal pengguna.
 * Basis data didefinisikan sendiri.
 
-## Bonus
-
-Catatan: Kerjakan dahulu spesifikasi wajib sebelum mengerjakan bonus.
-
-1. Data yang disimpan pada cookie memiliki expiry time. Jika access token ini tidak ada atau tidak valid, maka pengguna dianggap belum login. Expiry time sebuah access token berbeda dengan waktu berlaku cookie.
-2. Pada halaman Buy Chocolate, ketersediaan coklat diperbaharui secara real-time. Contoh jika pengguna A ingin membeli persediaan terakhir coklat dengan jenis tersebut dan ternyata pengguna B telah membeli coklat terakhir tersebut, maka ketersediaan coklat perlu diperbaharui. Akibatnya, pengguna A tidak dapat membeli coklat dengan jenis tersebut. Pembaharuan ketersediaan coklat menggunakan AJAX.
-3. Tampilan dibuat responsif (minimal untuk ukuran 1280x768 dan 800x600). Artinya, tampilan mungkin berubah menyesuaikan ukuran layar.
-
-## Bantuan
-
-Untuk membantu anda dalam mengerjakan tugas ini, ada beberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.
-
-|              | Kata Kunci                                                                                            |
-| ------------ | ----------------------------------------------------------------------------------------------------- |
-| HTTP methods | get, post, put, delete                                                                                |
-| CSS          | margin, padding, font-size, text-align, flex, grid, border, color, div, span, anchor tag, box-shadow  |
-| Javascript   | XMLHTTPRequest, addEventListener                                                                      |
-| PHP          | mysqli_connect, mysql_query, $_GET, $_POST, $_COOKIE, var_dump, print_r, echo, require, fungsi header |
-| SQL query    | SELECT, INSERT, UPDATE, DELETE, WHERE, operator LIKE                                                  |
-
-Jika ada pertanyaan, silahkan bertanya di channel Tubes 1 di MS Teams.
-
-## Anggota Kelompok
-Anggota kelompok dapat diisi pada spreadsheet berikut : https://docs.google.com/spreadsheets/d/1l2H6Er4lZjyiO2ehqlBKOOZT5gE1pLukw2EHTGzqY3U/edit?usp=sharing
 
 ## Petunjuk Pengerjaan
 
-1. Buatlah grup pada Gitlab dengan format "IF3110-2020-01-KXX-YY", dengan XX adalah nomor kelas dan YY adalah nomor kelompok.
-2. Tambahkan anggota kelompok pada grup anda.
-3. Fork pada repository ini dengan grup yang telah dibuat.
-4. Ubah hak akses repository hasil Fork anda menjadi private.
-5. Silakan commit pada repository anda (hasil fork). Lakukan beberapa commit dengan pesan yang bermakna, contoh: `add login form`, `fix login bug`, jangan seperti `final`, `dikit lagi`, `benerin bug`.
 6. Buatlah file README yang berisi:
     * Deskripsi aplikasi web
     * Daftar requirement
@@ -190,26 +170,27 @@ Anggota kelompok dapat diisi pada spreadsheet berikut : https://docs.google.com/
     * Screenshot tampilan aplikasi, dan
     * Penjelasan mengenai pembagian tugas masing-masing anggota (lihat formatnya pada bagian pembagian tugas).
 
-## Pengumpulan Tugas
 
-Deadline tugas adalah pada hari Minggu, 25 Oktober 2020 pukul 19.00 WIB. Waktu pengumpulan tugas yang dilihat adalah waktu push ke server Gitlab terakhir.
 
 ## Pembagian Tugas
 
 Setiap anggota kelompok diwajibkan untuk mengerjakan bagian frontend dan backend.
 
 ### Frontend
-1. Login : 13518xxx, 13518xxx
-2. Register : 13518xxx
-3. (Lanjutkan …)
+1. Login : 
+2. Register : 
+3. Add : 13518xxx, 13518141
+4. Add Stock : 13518xxx, 13518141
+5. History : 13518141
+6. Buy : 13518xxx, 13518141
 
 ### Backend
 1. Login : 13518xxx, 13518xxx
 2. Register : 13518xxx
-3. (Lanjutkan…)
+3. Add : 13518xxx, 13518141
+4. Add Stock : 13518xxx, 13518141
+5. History : 13518141
+6. Buy : 13518xxx, 13518141
+7. Database : 13518141
 
-## About
 
-Asisten IF3110 - 2020
-
-Abel | Agwar | Asif | Iwang | Meyer | Vendra
