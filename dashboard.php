@@ -8,7 +8,8 @@
         FROM chocolate LEFT OUTER JOIN transaction
         ON transaction.chocolate_id = chocolate.id
         GROUP BY chocoID
-        ORDER BY amountSold DESC;
+        ORDER BY amountSold DESC
+        LIMIT 10
     ";
     $connector = new Connector();
     $data = $connector->getAllData($query);
