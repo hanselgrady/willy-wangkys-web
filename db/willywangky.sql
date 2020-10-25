@@ -58,6 +58,7 @@ DROP TABLE IF EXISTS `willywangky`.`transaction` ;
 
 CREATE TABLE IF NOT EXISTS `willywangky`.`transaction` (
   `id` INT NOT NULL AUTO_INCREMENT,
+  `user_id` INT NOT NULL,
   `chocolate_id` INT NOT NULL,
   `amount` INT NULL,
   `total_price` INT NULL,
@@ -68,6 +69,11 @@ CREATE TABLE IF NOT EXISTS `willywangky`.`transaction` (
   CONSTRAINT `chocolate_transaction`
     FOREIGN KEY (`chocolate_id`)
     REFERENCES `willywangky`.`chocolate` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `user_transaction`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `willywangky`.`user` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -82,8 +88,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `willywangky`;
-INSERT INTO `willywangky`.`chocolate` (`id`, `name`, `price`, `description`, `image`, `amount`) VALUES (1, 'choco', 10000, 'pure choco', NULL, 10);
-INSERT INTO `willywangky`.`chocolate` (`id`, `name`, `price`, `description`, `image`, `amount`) VALUES (2, 'white choco', 15000, 'pure white choco', NULL, 15);
+INSERT INTO `willywangky`.`chocolate` (`id`, `name`, `price`, `description`, `image`, `amount`) VALUES (1, 'Chocolate', 10000, 'pure choco', NULL, 10);
+INSERT INTO `willywangky`.`chocolate` (`id`, `name`, `price`, `description`, `image`, `amount`) VALUES (2, 'White Chocolate', 15000, 'pure white choco', NULL, 15);
 
 COMMIT;
 
@@ -94,6 +100,7 @@ COMMIT;
 START TRANSACTION;
 USE `willywangky`;
 INSERT INTO `willywangky`.`user` (`id`, `email`, `username`, `password`, `description`, `superuser`) VALUES (1, 'willywangky@willywangky.com', 'willywangky', 'willywangky', 'first super user', 1);
+INSERT INTO `willywangky`.`user` (`id`, `email`, `username`, `password`, `description`, `superuser`) VALUES (2, 'john.doe@mail.com', 'johndoe', 'password', 'regular user', 0);
 
 COMMIT;
 
@@ -103,7 +110,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `willywangky`;
-INSERT INTO `willywangky`.`transaction` (`id`, `chocolate_id`, `amount`, `total_price`, `time`, `address`) VALUES (1, 1, 5, 50000, '2020-10-21 06:00:10', 'Bandung');
+INSERT INTO `willywangky`.`transaction` (`id`, `chocolate_id`, `user_id`, `amount`, `total_price`, `time`, `address`) VALUES (1, 1, 2, 5, 50000, '2020-10-21 06:00:10', 'Bandung');
 
 COMMIT;
 

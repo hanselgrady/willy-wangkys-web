@@ -69,18 +69,32 @@
                         <label id="Description"><?php echo $result[0]['description'];?></label>
                     </div>
                 </div>
-                <div id="detail-form" style= "display:none">
-                    <div class="secondary-container">
-                        <form action="/detail-handler.php" method = "post" >
+                <div class="secondary-container clearfix">
+                    <div id="detail-form-stock" style= "display:none">
+                        <form action="/handle-detail.php" method = "post" >
                                 <div class="content-label">
-                                    <label for="amount">Amount to add: </label>
+                                    <label for="amount">Amount: </label>
                                 </div>    
                             <input type="number" id="amount" name="amount"><br><br>
-                            <input type="hidden" id="test" name="test" value = "stringtest">
                             <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
                             <div class="button-container">
-                            <input type="button" onclick="cancelAddStock()" value="Cancel"></button>
-                            <input type="submit" value="Add">
+                                <input type="button" onclick="cancelAddStock()" value="Cancel"></button>
+                                <input type="submit" value="Add">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="detail-form-buy" style= "display:none">
+                        <form action="/handle-detail.php" method = "post" >
+                                <div class="content-label">
+                                    <label for="amount">Amount: </label>
+                                </div>    
+                            <input type="number" id="amount" name="amount"><br><br>
+                            <textarea name="address" rows="10" cols="30" required placeholder="Address"></textarea><br>
+                            <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
+                            <div class="button-container">
+                                <input type="button" onclick="cancelBuy()" value="Cancel"></button>
+                                <input type="submit" value="Buy">
                             </div>
                         </form>
                     </div>
@@ -90,12 +104,12 @@
                         
                         if (isSuperuser($_COOKIE['username'])) {
                             echo "
-                            <script src='detail-button.js'></script>
+                            <script src='/assets/scripts/detail-button.js'></script>
                             <button id = 'detail-add-stock-button' onClick='detailAddStock()'>Add Stock</button>
                             ";
                         } else {
                             echo "
-                            <script src='detail-button.js'></script>
+                            <script src='/assets/scripts/detail-button.js'></script>
                             <button id = 'detail-buy-button' onClick='detailBuy()'>Buy Now</button>
                             ";
                         }
