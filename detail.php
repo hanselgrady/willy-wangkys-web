@@ -27,6 +27,7 @@
 <html lang="en" dir="lttr">
     <head>
         <meta charset="utf-8">
+        <title>Detail - Willy-Wanky</title>
         <link rel="stylesheet" href="assets/styles/DetailUserAdmin.css">
         <link rel="stylesheet" href="/assets/styles/common.css">
         <link rel="stylesheet" href="/assets/styles/common-navbar.css">

@@ -1,22 +1,39 @@
-table { 
+@import url('/assets/styles/common-fonts.css');
+
+.table-container {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+table.common-table { 
     width: 100%; 
     border-collapse: collapse; 
+    border: none;
+    border-radius: 10px;
   }
   /* Zebra striping */
-  tr:nth-of-type(odd) { 
-    background: rgb(250, 136, 136); 
+table.common-table tr:nth-of-type(odd) { 
+    background: rgb(250, 216, 176); 
+    border: none;
+    border-bottom: 1px solid #acacac;
   }
-  tr:nth-of-type(even) { 
+table.common-table tr:nth-of-type(even) { 
     background: white; 
+    border: none;
+    border-bottom: 1px solid #acacac;
   }
-  th { 
+table.common-table th { 
     background: #333; 
     color: white; 
     font-weight: bold; 
-  }
-  td, th { 
-    padding: 6px; 
-    border: 1px solid #ccc; 
+    border: none;
+    border-bottom: 2px solid #161616;
     text-align: left; 
+  }
+table.common-table td, table.common-table th { 
+    border: none;
+    padding: 10px; 
     font-weight: bold; 
   }
