@@ -21,7 +21,7 @@
                 <input type="text" name="name" required><br>
                 <label for="price">Price</label><br>
                 <input type="number" name="price" required><br>
-                <textarea name="description" rows="10" cols="30" required>Description</textarea><br>
+                <textarea name="description" rows="10" cols="30" required placeholder="Description"></textarea><br>
                 <h2>PHP Image Upload with Size Type Dimension Validation</h2>
                 <div class="form-row">
                     <div>Choose Image file:</div>
@@ -40,6 +40,6 @@
                 ">
                 <?php echo $response["message"]; ?>
             </div>
-            <?php }?>
+        <?php }?>
     </body>
 </html>

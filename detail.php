@@ -30,6 +30,7 @@
         <link rel="stylesheet" href="assets/styles/DetailUserAdmin.css">
         <link rel="stylesheet" href="/assets/styles/common.css">
         <link rel="stylesheet" href="/assets/styles/common-navbar.css">
+        
     </head>
     <body>
         <?php include 'get-header.php';?>
@@ -56,17 +57,45 @@
                             <label id="Amount"><?php echo $result[0]['amount'];?></label>
                         </div>
                         <div class="content-label">
+                            <label><b>id : </b></label>
+                            <label id="Amount"><?php echo $result[0]['chocoID'];?></label>
+                        </div>
+                        <div class="content-label">
                             <label><b>Description</b></label>
                         </div>
                         <label id="Description"><?php echo $result[0]['description'];?></label>
                     </div>
                 </div>
+                <div id="detail-form" style= "display:none">
+                    <div class="secondary-container">
+                        <form action="/detail-handler.php" method = "post" >
+                                <div class="content-label">
+                                    <label for="amount">Amount: </label>
+                                </div>    
+                            <input type="number" id="amount" name="amount"><br><br>
+                            <input type="hidden" id="test" name="test" value = "stringtest">
+                            <input type="hidden" id="choco_id" name="choco_id" value= "<?php echo $result[0]['chocoID'] ?>" />
+                            <div class="button-container">
+                            <button> 
+                                <input type="submit" value="Submit">
+                            </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 <div class="button-container">
                     <?php
+                        
                         if (isSuperuser($_COOKIE['username'])) {
-                            echo '<button>Add Stock</button>';
+                            echo "
+                            <script src='detail-button.js'></script>
+                            <button id = 'detail-add-stock-button' onClick='detailAddStock()'>Add Stock</button>
+                            ";
                         } else {
-                            echo '<button>Buy Now</button>';
+                            echo "
+                            <script src='detail-button.js'></script>
+                            <button id = 'detail-buy-button' onClick='detailBuy()'>Buy Now</button>
+                            ";
                         }
                     ?>
                 </div>

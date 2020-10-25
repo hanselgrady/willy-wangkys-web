@@ -183,3 +183,17 @@ body {
     padding: 5px;
     align-self: center;
 }
+
+input[type="submit"], button:hover input[type="submit"] , button:visited:hover input[type="submit"] , button:active input[type="submit"]  {
+    left: 20px;
+    min-width: 300px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    background-color: white;
+    color: brown;
+    text-decoration: none;
+    border: none;
+    padding: 5px;
+    align-self: center;
+}
