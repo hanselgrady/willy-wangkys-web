@@ -23,34 +23,39 @@ Tidak ada
 
 # Screenshot Perubahan Aplikasi
 
-![](screenshots/Screenshot%20from%202020-10-25%2016-13-09.png)
+![Add New Chocolate Before](screenshots/add.png "Add New Chocolate Before") 
+
+![Add New Chocolate After](screenshots/ingredients.png "Add New Chocolate After")
 
 
 
 ## Pembagian Tugas
 
-### Frontend
-1. Login : 13518140
-2. Register : 13518140, 13518115
-3. Dashboard : 13518115
-4. Search : 13518115
-5. Detail : 13518140, 13518115
-6. Add Stock : 13518141
-7. Buy : 13518141
-8. History : 13518141
-9. Add Chocolate : 13518141
+### WS-Factory
+1. Saldo : ...
+2. Recipe : ...
+3. Ingredients : ..., 13518141 (addNewIngredients)
+4. Request : 13518141
+5. Transaction : ...
+6. SOAPPublisher
+7. Chocolate :
 
-### Backend
-1. Login : 13518140
-2. Register : 13518140
-3. Dashboard : 13518115
-4. Search : 13518115
-5. Detail : 13518115
-6. Add Stock : 13518141
-7. Buy : 13518141
-8. History : 13518141
-9. Add Chocolate : 13518141
-10. Database : 13518141
+
+### WS-Supplier
+1.  
+2.
+3.
+
+### WW-Factory
+1.
+2.
+3.
+
+### WW Web Aplication
+1.
+2.
+3.
+
 
 
 
