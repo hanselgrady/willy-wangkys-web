@@ -6,16 +6,29 @@ include_once 'connector.php';
 include_once 'accdetail.php';
 
 if (isset($_POST["choco_id"]) && isset($_POST["amount"]) && isset($_COOKIE["username"]) && (isSuperuser($_COOKIE["username"])) ){
-
-    $connector = new Connector();
     $id = $_POST["choco_id"];
     $amount = $_POST["amount"];
-    $query = "
-        UPDATE chocolate 
-        SET amount = amount + {$amount}
-        WHERE id = {$id};
-    ";
-    $connector->run($query);
+    $wsdl   = "http://localhost:9999/ws/chocolate?wsdl";
+    $client = new SoapClient($wsdl, array('trace'=>1));
+
+    // web service input params
+    $request_param = array(
+        "id" => $id,
+        "amount" => $amount,
+        "status" => "pending"
+    );
+
+    try
+    {
+        $response = $client->__soapCall("addChocolate", array($params));
+    //$responce_param =  $client->call("webservice_methode_name", $request_param);
+    } 
+    catch (Exception $e) 
+    { 
+        echo "<h2>Exception Error!</h2>"; 
+        echo $e->getMessage(); 
+    }
+
     header("Location: /detail.php?itemID={$_POST["choco_id"]}");
 }
 else if (isset($_POST["amount"]) && isset($_COOKIE["username"]) && (isset($_POST["address"]))) {
