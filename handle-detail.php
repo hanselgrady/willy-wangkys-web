@@ -1,5 +1,5 @@
 <?php
-
+header("Access-Control-Allow-Origin: *");
 include_once 'validate-auth.php';
 include_once 'connector.php';
 
