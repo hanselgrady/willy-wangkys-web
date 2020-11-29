@@ -27,39 +27,32 @@ Tidak ada
 
 ![Add New Chocolate After](screenshots/ingredients.png "Add New Chocolate After")
 
+### REST
+1. List Bahan: 13518140
+2. Beli Bahan: 13518115
 
+### SOAP
+1. List Bahan Tersedia: 13518115
+2. Lihat Jumlah Stok Per Bahan: 13518115
+3. Tambah Bahan Baru: 13518141
+4. Tambah Coklat Baru: 
+5. List Resep Coklat: 13518115
+6. Database Connector: 
+7. Cek saldo:
+8. Tambah Saldo:
+9. Request Stok Coklat: 13518141
+10. Cek Request: 13518141
+11. Terima Request: 13518141
 
-## Pembagian Tugas
+### React
+1. Login: 13518141
+2. Struktur Halaman: 13518115
+3. List Bahan: 13518115
+4. Beli Bahan: 13518115
 
-### WS-Factory
-1. Saldo : ...
-2. Recipe : ...
-3. Ingredients : ..., 13518141 (addNewIngredients)
-4. Request : 13518141
-5. Transaction : ...
-6. SOAPPublisher
-7. Chocolate :
-
-
-### WS-Supplier
-1.  
-2.
-3.
-
-### WW-Factory
-1.
-2.
-3.
-
-### WW Web Aplication
-1.
-2.
-3.
-
-
-
-
-
+### Perubahan WWWeb
+1. Add Stock : 13518141
+2. Add Ingredients : 13518141
 
 
 
