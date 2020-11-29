@@ -1,4 +1,4 @@
-# Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web
+# Tugas 2 IF3110 Pengembangan Aplikasi Berbasis Web
 
 ## Deskripsi aplikasi web.
 
