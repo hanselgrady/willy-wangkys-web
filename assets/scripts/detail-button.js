@@ -49,5 +49,6 @@ function verifyBuyAmount() {
 
 }
 
+
 buyAmount.onkeyup = verifyBuyAmount;
 buyAmount.onchange = verifyBuyAmount;

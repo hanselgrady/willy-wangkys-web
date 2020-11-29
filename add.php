@@ -13,7 +13,6 @@
         <link rel="stylesheet" type="text/css" href="/assets/styles/common.css">
         <link rel="stylesheet" type="text/css" href="/assets/styles/common-navbar.css">
         <link rel="stylesheet" type="text/css" href="/assets/styles/DetailUserAdmin.css">
-        
 
     </head>
     <body>
@@ -48,6 +47,23 @@
                                 <label for="amount">Amount</label><br><br>
                             </div>
                             <input class="amount-box" type="number" name="amount" required min ="0"><br>
+                            <div id = "insert-row">
+                                <div class = "content-label">
+                                    <br>
+                                    <label for="recipe">Recipe</label><br><br>
+                                    <br>
+                                    <div class = "content-label">
+                                        <label for="recipe">Ingredients Name</label><br><br>
+                                    </div>
+                                    <input class = "name-box" type="text" name="ingredientsname" required><br><br>
+                                    <div class = "content-label">
+                                        <label for="amount-ingredients">Ingredients Amount</label><br><br>
+                                    </div>
+                                    <input class="amount-box" type="number" name="ingredientsamount" required min ="0"><br>
+                                </div>
+                            </div>
+                            <br>
+                            <button onclick="insertRow()">Insert New Ingredients</button>
                             <div class ="button-container">
                             <br>
                             <input type="submit" value ="Add Chocolate" name = "upload">
@@ -63,5 +79,7 @@
                 <?php echo $response["message"]; ?>
             </div>
         <?php }?>
+        <script src='/assets/scripts/add.js'></script>
+
     </body>
 </html>
