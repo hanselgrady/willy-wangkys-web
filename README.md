@@ -25,36 +25,28 @@ Tidak ada
 
 ![](screenshots/Screenshot%20from%202020-10-25%2016-13-09.png)
 
+### REST
+1. List Bahan: 13518140
+2. Beli Bahan: 13518115
 
+### SOAP
+1. List Bahan Tersedia: 13518115
+2. Lihat Jumlah Stok Per Bahan: 13518115
+3. Tambah Bahan Baru:
+4. Tambah Coklat Baru:
+5. List Resep Coklat: 13518115
+6. Database Connector: 
+7. Cek saldo:
+8. Tambah Saldo:
+9. Request Stok Coklat:
+10. Cek Request:
+11. Terima Request:
 
-## Pembagian Tugas
-
-### Frontend
-1. Login : 13518140
-2. Register : 13518140, 13518115
-3. Dashboard : 13518115
-4. Search : 13518115
-5. Detail : 13518140, 13518115
-6. Add Stock : 13518141
-7. Buy : 13518141
-8. History : 13518141
-9. Add Chocolate : 13518141
-
-### Backend
-1. Login : 13518140
-2. Register : 13518140
-3. Dashboard : 13518115
-4. Search : 13518115
-5. Detail : 13518115
-6. Add Stock : 13518141
-7. Buy : 13518141
-8. History : 13518141
-9. Add Chocolate : 13518141
-10. Database : 13518141
-
-
-
-
+### React
+1. Login: 13518141
+2. Struktur Halaman: 13518115
+3. List Bahan: 13518115
+4. Beli Bahan: 13518115
 
 
 
