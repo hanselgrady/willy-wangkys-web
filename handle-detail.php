@@ -8,11 +8,11 @@ include_once 'accdetail.php';
 if (isset($_POST["choco_id"]) && isset($_POST["amount"]) && isset($_COOKIE["username"]) && (isSuperuser($_COOKIE["username"])) ){
     $id = $_POST["choco_id"];
     $amount = $_POST["amount"];
-    $wsdl   = "http://localhost:9999/ws/chocolate?wsdl";
+    $wsdl   = "http://localhost:9999/ws/request?wsdl";
     $client = new SoapClient($wsdl, array('trace'=>1));
 
     // web service input params
-    $request_param = array(
+    $params = array(
         "id" => $id,
         "amount" => $amount,
         "status" => "pending"
@@ -20,7 +20,7 @@ if (isset($_POST["choco_id"]) && isset($_POST["amount"]) && isset($_COOKIE["user
 
     try
     {
-        $response = $client->__soapCall("addChocolate", array($params));
+        $response = $client->__soapCall("addStock", array($params));
     //$responce_param =  $client->call("webservice_methode_name", $request_param);
     } 
     catch (Exception $e) 
