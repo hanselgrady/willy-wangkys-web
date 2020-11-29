@@ -35,11 +35,11 @@ Tidak ada
 1. List Bahan Tersedia: 13518115
 2. Lihat Jumlah Stok Per Bahan: 13518115
 3. Tambah Bahan Baru: 13518141
-4. Tambah Coklat Baru: 
+4. Tambah Coklat Baru: 13518140
 5. List Resep Coklat: 13518115
-6. Database Connector: 
-7. Cek saldo:
-8. Tambah Saldo:
+6. Database Connector: 13518140
+7. Cek saldo: 13518140
+8. Tambah Saldo: 13518140
 9. Request Stok Coklat: 13518141
 10. Cek Request: 13518141
 11. Terima Request: 13518141
